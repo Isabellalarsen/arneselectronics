@@ -15,11 +15,9 @@ public partial class MainWindow : Window
         this.Loaded += (_, _) =>
         {
             Console.WriteLine("Window Loaded!");
-
+            //Insert methods here instead to update cart counter and total Counter
             Total.Text += " 1";
-            AntalVarer.Text += " 1";
-
-            //hej
+            Quantity.Text += " 1";
 
             LoadImage("LogoImage", "avares://arneselectronics/Assets/testbillede1.jpg");
             LoadImage("CartLogo", "avares://arneselectronics/Assets/carticon.jpg");

@@ -19,7 +19,7 @@
 
                 <StackPanel Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10">
                     <TextBlock  Height="15" Name="Total" Text="Total:" FontSize="14"/>
-                    <TextBlock Height="15" Name="AntalVarer" Text="Antal varer:"> </TextBlock>
+                    <TextBlock Height="15" Name="Quantity" Text="Antal varer:"> </TextBlock>
                 </StackPanel>
 
             </Grid>
