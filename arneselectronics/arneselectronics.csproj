@@ -23,4 +23,9 @@
     <ItemGroup>
       <Folder Include="pictures\" />
     </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Assets\testbillede1.jpg" />
+      <AvaloniaResource Include="Assets\testbillede1.jpg" />
+    </ItemGroup>
 </Project>
