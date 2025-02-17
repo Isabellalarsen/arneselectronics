@@ -24,7 +24,6 @@
       <None Remove="Assets\testbillede1.jpg" />
       <AvaloniaResource Include="Assets\testbillede1.jpg" />
       <None Remove="Assets\test2.jpg" />
-      <AvaloniaResource Include="Assets\test2.jpg" />
       <None Remove="Assets\carticon.jpg" />
       <AvaloniaResource Include="Assets\carticon.jpg" />
     </ItemGroup>
