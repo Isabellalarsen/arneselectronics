@@ -17,9 +17,6 @@ public partial class MainWindow : Window
             Console.WriteLine("Window Loaded!");
             LoadLogo();
             CartLogo1();
-            Total.Text += " 1";
-            AntalVarer.Text += " 1";
-
         };
     }
 
