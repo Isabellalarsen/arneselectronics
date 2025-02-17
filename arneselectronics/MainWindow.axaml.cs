@@ -19,6 +19,7 @@ public partial class MainWindow : Window
             Total.Text += " 1";
             AntalVarer.Text += " 1";
 
+            //hej
 
             LoadImage("LogoImage", "avares://arneselectronics/Assets/testbillede1.jpg");
             LoadImage("CartLogo", "avares://arneselectronics/Assets/carticon.jpg");
