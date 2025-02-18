@@ -1,4 +1,6 @@
 using Avalonia.Controls;
+using Avalonia.Media.Imaging;
+using Avalonia.Platform;
 using System;
 using Avalonia.Data;
 
@@ -8,35 +10,49 @@ public partial class MainWindow : Window
 {
     public MainWindow()
     {
-        InitializeComponent();  // Initialize the window's components (controls defined in XAML)
+        InitializeComponent();
         
         //Objects/Instance of products
         Products product1 = new Products("Lenovo Tablet", "Den sejeste tablet", 1234567910110, 1, 699.420);
         Products product2 = new Products("MacBook Pro", "Apple Laptop", 1234567910111, 1, 1299.99);
-        Product1NameTextBlock.DataContext = product1;
+        Product1NameTextBlock.Text = product1.ProductName;
+        
         Product2NameTextBlock.DataContext = product2;
        // ProductNameTextBlock.Bind(TextBlock.TextProperty, new Binding("productName"));
         
 
-        // Create an instance of the ImageHandler class to handle loading images
-        var imageHandler = new ImageHandler();
-
-        // Set up an event handler to be triggered when the window is loaded
+        // Directly load the logos when the window is initialized
         this.Loaded += (_, _) =>
         {
-            // Log to the console when the window is loaded successfully
             Console.WriteLine("Window Loaded!");
+            //Insert methods here instead to update cart counter and total Counter
+            Total.Text += " 1";
+            Quantity.Text += " 1";
+
+            LoadImage("LogoImage", "avares://arneselectronics/Assets/testbillede1.jpg");
+            LoadImage("CartLogo", "avares://arneselectronics/Assets/carticon.jpg");
             
-            // Update the Total and Quantity labels to show the default values (1)
-            Total.Text = "Total: 1";  // Set the 'Total' label to show "Total: 1"
-            Quantity.Text = "Quantity: 1";  // Set the 'Quantity' label to show "Quantity: 1"
-
-            // Use the ImageHandler to load images into the Image controls
-            // Load the logo image for the "LogoImage" control
-            imageHandler.LoadImage(this, "LogoImage", "avares://arneselectronics/Assets/testbillede1.jpg");
-
-            // Load the cart icon for the "CartLogo" control
-            imageHandler.LoadImage(this, "CartLogo", "avares://arneselectronics/Assets/carticon.jpg");
         };
+    }
+
+    private void LoadImage(string controlName, string imageUri)
+    {
+        try
+        {
+            // Find the Image control by name
+            var imageControl = this.FindControl<Image>(controlName);
+
+            // Load the image from the resource using the URI
+            var uri = new Uri(imageUri);
+            var stream = AssetLoader.Open(uri);
+
+            // Set the image source
+            imageControl.Source = new Bitmap(stream);
+        }
+        catch (Exception ex)
+        {
+            // Log any errors
+            Console.WriteLine($"Error loading image for {controlName}: {ex.Message}");
+        }
     }
 }

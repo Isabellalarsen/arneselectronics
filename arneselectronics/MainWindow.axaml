@@ -24,8 +24,6 @@
                 </StackPanel>
 
             </Grid>
-            <TextBlock Name="Product1NameTextBlock"></TextBlock>
-            <TextBlock Name="Product2NameTextBlock" ></TextBlock>
             
             <!-- Tab Items grid -->
             <Grid Margin="10" RowDefinitions="Auto" ColumnDefinitions="Auto, Auto, Auto, Auto, Auto, *" ShowGridLines="True">
@@ -36,6 +34,8 @@
                 <TabItem Grid.Column="4" Header="Viden" />
                 <TextBox Grid.Column="5" Height="0" Watermark="Søg..."/>
             </Grid>
+            <TextBlock Name="Product1NameTextBlock"></TextBlock>
+            <TextBlock Name="Product2NameTextBlock" ></TextBlock>
         </StackPanel>
     </TabControl>
 </Window>
