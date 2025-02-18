@@ -2,38 +2,52 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="500"
         x:Class="arneselectronics.MainWindow"
         Title="arneselectronics">
-<!--Hej-->
+
+    <!-- Define the layout of the Window -->
     <TabControl>
-        <StackPanel>
-            <Grid RowDefinitions="Auto" ColumnDefinitions="*,*,Auto">
-                <!-- Add Image control for Logo -->
-                <Image HorizontalAlignment="Left" Grid.Column="0" x:Name="LogoImage" Width="200" Height="100" Margin="10"/>
+        <TabItem Header="Stationære">
+            <StackPanel Margin="10">
+                <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*,*,Auto">
+                    <!-- Logo Image -->
+                    <Image HorizontalAlignment="Left" Grid.Column="0" x:Name="LogoImage" Width="200" Height="100" Margin="10"/>
     
-                <!-- Cart logo on the right -->
-                <Image Grid.Column="1" HorizontalAlignment="Right" x:Name="CartLogo" Width="50" Height="60" Margin="10"/>
+                    <!-- Cart Logo -->
+                    <Image Grid.Column="1" HorizontalAlignment="Right" x:Name="CartLogo" Width="50" Height="60" Margin="10"/>
     
-                <!-- TextBlock for the total in the middle column -->
+                    <!-- TextBlock for the total and quantity -->
+                    <StackPanel Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10">
+                        <TextBlock x:Name="Total" Text="Total: 0" FontSize="14" Height="20"/>
+                        <TextBlock x:Name="Quantity" Text="Antal varer: 0" Height="20"/>
+                    </StackPanel>
+                </Grid>
 
-                <StackPanel Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10">
-                    <TextBlock  Height="15" Name="Total" Text="Total:" FontSize="14"/>
-                    <TextBlock Height="15" Name="Quantity" Text="Antal varer:"> </TextBlock>
-                </StackPanel>
+                <!-- Add to Basket Button -->
+                <Button x:Name="AddToBasketButton" Content="Add to Basket" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"/>
+            </StackPanel>
+        </TabItem>
 
-            </Grid>
+        <!-- Other TabItems -->
+        <TabItem Header="Bærbare">
+            <TextBlock Margin="5">This is tab Bærbare content</TextBlock>
+        </TabItem>
+        
+        <TabItem Header="Hardware">
+            <TextBlock Margin="5">This is tab Hardware content</TextBlock>
+        </TabItem>
 
-            
-            <!-- Tab Items grid -->
-            <Grid Margin="10" RowDefinitions="Auto" ColumnDefinitions="Auto, Auto, Auto, Auto, Auto, *" ShowGridLines="True">
-                <TabItem Grid.Column="0" Header="Stationære" />
-                <TabItem Grid.Column="1" Header="Bærbare" />
-                <TabItem Grid.Column="2" Header="Hardware" />
-                <TabItem Grid.Column="3" Header="Tilbehør" />
-                <TabItem Grid.Column="4" Header="Viden" />
-                <TextBox Grid.Column="5" Height="0" Watermark="Søg..."/>
-            </Grid>
-        </StackPanel>
+        <TabItem Header="Tilbehør">
+            <TextBlock Margin="5">This is tab Tilbehør content</TextBlock>
+        </TabItem>
+
+        <TabItem Header="Viden">
+            <TextBlock Margin="5">This is tab Viden content</TextBlock>
+        </TabItem>
+
+        <TabItem>
+            <TextBox Height="30" HorizontalAlignment="Stretch" Watermark="Søg..."/>
+        </TabItem>
     </TabControl>
 </Window>

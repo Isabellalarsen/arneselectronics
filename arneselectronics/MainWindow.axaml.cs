@@ -1,32 +1,35 @@
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 using System;
 
 namespace arneselectronics;
 
 public partial class MainWindow : Window
 {
+
     public MainWindow()
     {
         InitializeComponent();  // Initialize the window's components (controls defined in XAML)
 
-        // Create an instance of the ImageHandler class to handle loading images
-        var imageHandler = new ImageHandler();
+        // Find the UI elements (Total and Quantity) from the XAML
+        Total = this.FindControl<TextBlock>("Total");
+        Quantity = this.FindControl<TextBlock>("Quantity");
 
         // Set up an event handler to be triggered when the window is loaded
         this.Loaded += (_, _) =>
         {
             // Log to the console when the window is loaded successfully
             Console.WriteLine("Window Loaded!");
-            
-            // Update the Total and Quantity labels to show the default values (1)
-            Total.Text = "Total: 1";  // Set the 'Total' label to show "Total: 1"
-            Quantity.Text = "Quantity: 1";  // Set the 'Quantity' label to show "Quantity: 1"
 
-            // Use the ImageHandler to load images into the Image controls
-            // Load the logo image for the "LogoImage" control
+            // Initialize BasketButton and pass the UI elements
+            var basketButton = new BasketButton(Total, Quantity);
+            // Optionally, attach event handler if needed
+            var addButton = this.FindControl<Button>("AddToBasketButton");
+            addButton.Click += basketButton.HandleButtonClick;
+
+            // Optionally, initialize and use ImageHandler to load images
+            var imageHandler = new ImageHandler();
             imageHandler.LoadImage(this, "LogoImage", "avares://arneselectronics/Assets/testbillede1.jpg");
-
-            // Load the cart icon for the "CartLogo" control
             imageHandler.LoadImage(this, "CartLogo", "avares://arneselectronics/Assets/carticon.jpg");
         };
     }

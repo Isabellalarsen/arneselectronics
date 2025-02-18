@@ -1,0 +1,44 @@
+// C# Naming Convention: camelCase Examples
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // camelCase variable
+        string userName = "JohnDoe";  
+        int userAge = 30;              
+        
+        Console.WriteLine(GetFullName("John", "Doe")); // Calling a method
+    }
+
+    // Method with camelCase parameters
+    static string GetFullName(string firstName, string lastName)
+    {
+        return firstName + " " + lastName;
+    }
+}
+
+// Example of a class using camelCase for private fields
+class Person
+{
+    private string _firstName;  // Private field using camelCase with an underscore
+    private int _age;
+
+    public Person(string firstName, int age)
+    {
+        _firstName = firstName;
+        _age = age;
+    }
+}
+
+// Example of a method using camelCase for local variables
+class Calculator
+{
+    public int AddNumbers(int firstNumber, int secondNumber)
+    {
+        int resultValue = firstNumber + secondNumber; // Local variable in camelCase
+        return resultValue;
+    }
+}
