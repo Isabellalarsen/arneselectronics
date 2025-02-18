@@ -1,5 +1,6 @@
 using Avalonia.Controls;
 using System;
+using Avalonia.Data;
 
 namespace arneselectronics;
 
@@ -8,6 +9,14 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();  // Initialize the window's components (controls defined in XAML)
+        
+        //Objects/Instance of products
+        Products product1 = new Products("Lenovo Tablet", "Den sejeste tablet", 1234567910110, 1, 699.420);
+        Products product2 = new Products("MacBook Pro", "Apple Laptop", 1234567910111, 1, 1299.99);
+        Product1NameTextBlock.DataContext = product1;
+        Product2NameTextBlock.DataContext = product2;
+       // ProductNameTextBlock.Bind(TextBlock.TextProperty, new Binding("productName"));
+        
 
         // Create an instance of the ImageHandler class to handle loading images
         var imageHandler = new ImageHandler();
