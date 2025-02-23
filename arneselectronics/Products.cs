@@ -1,4 +1,8 @@
+using System.Collections.ObjectModel;
+
 namespace arneselectronics;
+using System;
+using System.Collections.Generic;
 
 public class Products 
 {
@@ -29,9 +33,4 @@ public class Products
             return $"{ProductName} \t {ProductPrice.ToString()} \n {ProductDescription} \n {EAN_Number.ToString()} \n {ID.ToString()} ";
         }
     }
-
-
-    
-    
-    
 }

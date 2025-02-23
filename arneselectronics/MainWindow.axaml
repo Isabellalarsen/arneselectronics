@@ -2,6 +2,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:arneselectronics"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="arneselectronics.MainWindow"
         Title="arneselectronics">
@@ -34,8 +36,24 @@
                 <TabItem Grid.Column="4" Header="Viden" />
                 <TextBox Grid.Column="5" Height="0" Watermark="Søg..."/>
             </Grid>
-            <TextBlock Name="Product1NameTextBlock"></TextBlock>
-            <TextBlock Name="Product2NameTextBlock" ></TextBlock>
+            <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*,*,*,*,*,*">
+                <TextBlock Grid.Column="0" Grid.Row="0" Name="Product1NameTextBlock"></TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="0" Name="Product2NameTextBlock" ></TextBlock>
+            </Grid>
+            
+            <TextBlock Text="{Binding ProductsList.Count}" />
+            
+            <ListBox ItemsSource="{Binding ProductsList}" Margin="10">
+                <ListBox.ItemTemplate>
+                    <DataTemplate x:DataType="local:Products">
+                        <StackPanel Margin="5">
+                            <TextBlock Text="{Binding ProductName}" FontSize="16" FontWeight="Bold" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            
         </StackPanel>
     </TabControl>
 </Window>
