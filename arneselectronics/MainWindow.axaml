@@ -34,8 +34,10 @@
                 <TabItem Grid.Column="4" Header="Viden" />
                 <TextBox Grid.Column="5" Height="0" Watermark="Søg..."/>
             </Grid>
-            <TextBlock Name="Product1NameTextBlock"></TextBlock>
-            <TextBlock Name="Product2NameTextBlock" ></TextBlock>
+            <Grid>
+                <TextBlock Name="Product1Block"></TextBlock>
+                <TextBlock Name="Product2Block" ></TextBlock>
+            </Grid>
         </StackPanel>
     </TabControl>
 </Window>
