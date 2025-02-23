@@ -17,9 +17,20 @@ public class Products
         this.EAN_Number = eanNumber;
         this.ID = id;
         this.ProductPrice = productPrice;
-
     }
-    
+    public string Display(string display)
+    {
+        if (display == "FrontPage")
+        {
+            return $"{ProductName}\n {ProductPrice.ToString()}";
+        }
+        else
+        {
+            return $"{ProductName} \t {ProductPrice.ToString()} \n {ProductDescription} \n {EAN_Number.ToString()} \n {ID.ToString()} ";
+        }
+    }
+
+
     
     
     
