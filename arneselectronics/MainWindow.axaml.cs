@@ -15,7 +15,7 @@ public partial class MainWindow : Window
         //Objects/Instance of products
         Products product1 = new Products("Lenovo Tablet", "Den sejeste tablet", 1234567910110, 1, 699.420);
         Products product2 = new Products("MacBook Pro", "Apple Laptop", 1234567910111, 1, 1299.99);
-        Product1Block.Text = product1.Display("FrontPage1");
+        //Product1Block.Text = product1.Display("FrontPage1");
         Product2Block.Text = product2.Display("FrontPage2");
        // ProductNameTextBlock.Bind(TextBlock.TextProperty, new Binding("productName"));
         
@@ -28,9 +28,9 @@ public partial class MainWindow : Window
             Total.Text += " 1";
             Quantity.Text += " 1";
             var ImageHandler = new ImageHandler();
-            ImageHandler.LoadImage( this,"LogoImage", "avares://arneselectronics/Assets/testbillede1.jpg");
-            ImageHandler.LoadImage( this, "CartLogo", "avares://arneselectronics/Assets/carticon.jpg");
-            
+            ImageHandler.LoadImage(this, "LogoImage", "avares://arneselectronics/Assets/testbillede1.jpg");
+            ImageHandler.LoadImage(this, "CartLogo", "avares://arneselectronics/Assets/carticon.jpg");
+
         };
     }
 
