@@ -2,35 +2,40 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using System;
 
-namespace arneselectronics;
-
-public partial class MainWindow : Window
+namespace arneselectronics
 {
-
-    public MainWindow()
+    public partial class MainWindow : Window
     {
-        InitializeComponent();  // Initialize the window's components (controls defined in XAML)
+        private TextBlock? _total;
+        private TextBlock? _quantity;
+        private Button? _addToBasketButton;
 
-        // Find the UI elements (Total and Quantity) from the XAML
-        Total = this.FindControl<TextBlock>("Total");
-        Quantity = this.FindControl<TextBlock>("Quantity");
-
-        // Set up an event handler to be triggered when the window is loaded
-        this.Loaded += (_, _) =>
+        public MainWindow()
         {
-            // Log to the console when the window is loaded successfully
+            InitializeComponent();  
+
+            this.Loaded += OnWindowLoaded;
+        }
+
+        private void OnWindowLoaded(object? sender, EventArgs e)
+        {
             Console.WriteLine("Window Loaded!");
 
-            // Initialize BasketButton and pass the UI elements
-            var basketButton = new BasketButton(Total, Quantity);
-            // Optionally, attach event handler if needed
-            var addButton = this.FindControl<Button>("AddToBasketButton");
-            addButton.Click += basketButton.HandleButtonClick;
+            // Ensure UI elements exist before using them
+            _total = this.FindControl<TextBlock>("Total");
+            _quantity = this.FindControl<TextBlock>("Quantity");
+            _addToBasketButton = this.FindControl<Button>("AddToBasketButton");
 
-            // Optionally, initialize and use ImageHandler to load images
+            if (_addToBasketButton != null)
+            {
+                var basketButton = new BasketButton(_total, _quantity);
+                _addToBasketButton.Click += basketButton.HandleButtonClick;
+            }
+
+            // Load images
             var imageHandler = new ImageHandler();
             imageHandler.LoadImage(this, "LogoImage", "avares://arneselectronics/Assets/testbillede1.jpg");
             imageHandler.LoadImage(this, "CartLogo", "avares://arneselectronics/Assets/carticon.jpg");
-        };
+        }
     }
 }
