@@ -41,16 +41,17 @@
                 <TextBlock Grid.Column="1" Grid.Row="0" Name="Product2NameTextBlock" ></TextBlock>
             </Grid>
             
-            
-            <ListBox Name="ProductsList" Margin="10">
-                <ListBox.ItemTemplate>
-                    <DataTemplate x:DataType="local:Products">
-                        <StackPanel Margin="5">
-                            <TextBlock Text="{Binding ProductName}" FontSize="16" FontWeight="Bold" />
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
+            <ScrollViewer>
+                <Grid RowDefinitions="Auto,Auto, Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,Auto,Auto,Auto">
+                <ItemsControl Grid.RowSpan="6" Grid.ColumnSpan="4" Name="ProductsList" Margin="10">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="local:Products">
+                                <TextBlock Text="{Binding ProductName}" FontSize="16" FontWeight="Bold" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                </Grid>
+            </ScrollViewer>
             
         </StackPanel>
     </TabControl>
