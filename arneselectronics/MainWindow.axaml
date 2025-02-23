@@ -42,16 +42,25 @@
             </Grid>
             
             <ScrollViewer>
-                <Grid RowDefinitions="Auto,Auto, Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,Auto,Auto,Auto">
-                <ItemsControl Grid.RowSpan="6" Grid.ColumnSpan="4" Name="ProductsList" Margin="10">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate x:DataType="local:Products">
-                                <TextBlock Text="{Binding ProductName}" FontSize="16" FontWeight="Bold" />
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-                </Grid>
+                <UniformGrid Columns="" Margin="10">
+                    <ItemsControl Name="ProductsList" >
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid Columns="4"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate x:DataType="local:Products">
+                                <!-- Display each product in a Border -->
+                                <Border Padding="5" BorderBrush="Gray" BorderThickness="1">
+                                    <TextBlock Text="{Binding ProductName}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </UniformGrid>
             </ScrollViewer>
+
             
         </StackPanel>
     </TabControl>
