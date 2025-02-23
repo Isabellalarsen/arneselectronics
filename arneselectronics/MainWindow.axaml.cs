@@ -3,6 +3,7 @@ using Avalonia.Media.Imaging;
 using Avalonia.Platform;
 using System;
 using System.Collections.ObjectModel;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Avalonia.Data;
 
@@ -10,14 +11,14 @@ namespace arneselectronics;
 
 public partial class MainWindow : Window
 {
-    public ObservableCollection<Products> ProductsList { get; set; }
+   
     public MainWindow()
     {
         InitializeComponent();
         DataContext = this;
         
         //Objects/Instance of products
-         ProductsList = new ObservableCollection<Products>
+        ProductsList.ItemsSource = new ObservableCollection<Products>
         {
             new Products("Lenovo Tablet", "Den sejeste tablet", 1234567910110, 1, 699.420),
             new Products("MacBook Pro", "Apple Laptop", 1234567910111, 2, 1299.99),
@@ -44,12 +45,6 @@ public partial class MainWindow : Window
             new Products("NZXT Kraken Z73", "AIO vandkøling med LCD-display", 1234567910132, 23, 249.99),
             new Products("Nvidia RTX 4090", "Kraftfuldt grafikkort til gaming og AI", 1234567910133, 24, 1599.00)
         };
-        foreach (Products product in ProductsList)
-        {
-            product.Display("FrontPage");
-        }
-        
-        Console.WriteLine($"Antal produkter: {ProductsList.Count}");
        
         
 

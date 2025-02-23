@@ -41,9 +41,8 @@
                 <TextBlock Grid.Column="1" Grid.Row="0" Name="Product2NameTextBlock" ></TextBlock>
             </Grid>
             
-            <TextBlock Text="{Binding ProductsList.Count}" />
             
-            <ListBox ItemsSource="{Binding ProductsList}" Margin="10">
+            <ListBox Name="ProductsList" Margin="10">
                 <ListBox.ItemTemplate>
                     <DataTemplate x:DataType="local:Products">
                         <StackPanel Margin="5">
@@ -52,7 +51,6 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-
             
         </StackPanel>
     </TabControl>
