@@ -11,9 +11,10 @@
             <Grid RowDefinitions="Auto" ColumnDefinitions="*,*,Auto">
                 <!-- Add Image control for Logo -->
                 <Image HorizontalAlignment="Left" Grid.Column="0" x:Name="LogoImage" Width="200" Height="100" Margin="10"/>
-    
+                
                 <!-- Cart logo on the right -->
                 <Image Grid.Column="1" HorizontalAlignment="Right" x:Name="CartLogo" Width="50" Height="60" Margin="10"/>
+                
     
                 <!-- TextBlock for the total in the middle column -->
 
@@ -23,7 +24,6 @@
                 </StackPanel>
 
             </Grid>
-
             
             <!-- Tab Items grid -->
             <Grid Margin="10" RowDefinitions="Auto" ColumnDefinitions="Auto, Auto, Auto, Auto, Auto, *" ShowGridLines="True">
@@ -34,6 +34,8 @@
                 <TabItem Grid.Column="4" Header="Viden" />
                 <TextBox Grid.Column="5" Height="0" Watermark="Søg..."/>
             </Grid>
+            <TextBlock Name="Product1NameTextBlock"></TextBlock>
+            <TextBlock Name="Product2NameTextBlock" ></TextBlock>
         </StackPanel>
     </TabControl>
 </Window>
