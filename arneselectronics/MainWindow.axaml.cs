@@ -1,17 +1,12 @@
 using Avalonia.Controls;
-using Avalonia.Media.Imaging;
-using Avalonia.Platform;
 using System;
 using System.Collections.ObjectModel;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using Avalonia.Data;
 
 namespace arneselectronics;
 
 public partial class MainWindow : Window
 {
-   
+   //Hej
     public MainWindow()
     {
         InitializeComponent();
