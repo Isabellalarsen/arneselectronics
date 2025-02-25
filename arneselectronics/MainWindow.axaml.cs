@@ -6,7 +6,7 @@ namespace arneselectronics;
 
 public partial class MainWindow : Window
 {
-   //Hej
+   //Hej med dig
     public MainWindow()
     {
         InitializeComponent();
