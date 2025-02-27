@@ -13,6 +13,8 @@ public class Products
     public int ID { get; set; }
     public double ProductPrice { get; set; }
     
+    public string PictureFilePath { get; set; }
+    
     // Constructor 
     public Products(string productName, string productDescription, long eanNumber, int id, double productPrice)
     {
