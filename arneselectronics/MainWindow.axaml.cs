@@ -16,8 +16,7 @@ public partial class MainWindow : Window
         ProductsList.ItemsSource = new ObservableCollection<Products>
         {
             new Products("Lenovo Tablet", "Den sejeste tablet", 1234567910110, 1, 699.420 , "avares://arneselectronics/Assets/gamingMus.jpg"),
-            new Products("MacBook Pro", "Apple Laptop", 1234567910111, 2, 1299.99 , "avares://arneselectronics/Assets/graphicsCard.jpg"),
-            new Products("Dell XPS 15", "Powerful Windows laptop", 1234567910112, 3, 1899.99 , "avares://arneselectronics/Assets/graphicsCard.jpg"),
+            new Products("Dell XPS 15", "Powerful Windows laptop", 1234567910112, 3, 1899.99 ,  null),
             new Products("Samsung Galaxy S24", "Nyeste Android smartphone", 1234567910113, 4, 1199.50 , "avares://arneselectronics/Assets/oldPC.jpg"),
             new Products("iPad Air", "Letvægts Apple tablet", 1234567910114, 5, 599.99 , "avares://arneselectronics/Assets/PC.jpg"),
             new Products("Sony WH-1000XM5", "Premium støjreducerende høretelefoner", 1234567910115, 6, 399.99 , "avares://arneselectronics/Assets/RAMStick.jpg"),
@@ -51,6 +50,7 @@ public partial class MainWindow : Window
             Quantity.Text += " 1";
             ImageHandler.LoadImage( this,"LogoImage", "avares://arneselectronics/Assets/testbillede1.jpg");
             ImageHandler.LoadImage( this, "CartLogo", "avares://arneselectronics/Assets/carticon.jpg");
+//ImageHandler.LoadImage(this , "FallBack" ,"avares://arneselectronics/Assets/fallback.jpg" );
             /*ImageHandler.LoadImage(this , "PC" ,"avares://arneselectronics/Assets/PC.jpg" );
             ImageHandler.LoadImage(this , "gamingMus" ,"avares://arneselectronics/Assets/gamingMus.jpg" );
             ImageHandler.LoadImage(this , "SSD" , "avares://arneselectronics/Assets/SSD.jpg" );

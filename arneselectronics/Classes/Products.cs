@@ -12,7 +12,7 @@ namespace arneselectronics
         public long EAN_Number { get; set; }
         public int ID { get; set; }
         public double ProductPrice { get; set; }
-        public string ImageFilePath { get; set; }
+        public string? ImageFilePath { get; set; }
 
         public Bitmap ProductImage
         {
@@ -27,12 +27,14 @@ namespace arneselectronics
                 catch (Exception ex)
                 {
                     Console.WriteLine($"Kunne ikke loade billede: {ImageFilePath} - {ex.Message}");
-                    return null;
+                    var uri = new Uri("avares://arneselectronics/Assets/fallback.jpg");
+                    using var stream = AssetLoader.Open(uri);
+                    return new Bitmap(stream);
                 }
-            }
+            } 
         }
 
-        public Products(string productName, string productDescription, long eanNumber, int id, double productPrice, string imageFilePath)
+        public Products(string productName, string productDescription, long eanNumber, int id, double productPrice, string? imageFilePath)
         {
             ProductName = productName;
             ProductDescription = productDescription;
