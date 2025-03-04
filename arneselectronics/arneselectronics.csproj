@@ -21,6 +21,7 @@
             <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
         </PackageReference>
         <PackageReference Include="Live.Avalonia" Version="1.4.1" />
+        <PackageReference Include="System.Drawing.Common" Version="10.0.0-preview.1.25080.3" />
     </ItemGroup>
 
     <ItemGroup>
@@ -29,5 +30,21 @@
       <None Remove="Assets\test2.jpg" />
       <None Remove="Assets\carticon.jpg" />
       <AvaloniaResource Include="Assets\carticon.jpg" />
+      <None Remove="Assets\SSD.jpg" />
+      <AvaloniaResource Include="Assets\SSD.jpg" />
+      <None Remove="Assets\RAMStick.jpg" />
+      <AvaloniaResource Include="Assets\RAMStick.jpg" />
+      <None Remove="Assets\PC.jpg" />
+      <AvaloniaResource Include="Assets\PC.jpg" />
+      <None Remove="Assets\oldPC.jpg" />
+      <AvaloniaResource Include="Assets\oldPC.jpg" />
+      <None Remove="Assets\MSI.jpg" />
+      <AvaloniaResource Include="Assets\MSI.jpg" />
+      <None Remove="Assets\graphicsCard.jpg" />
+      <AvaloniaResource Include="Assets\graphicsCard.jpg" />
+      <None Remove="Assets\gamingMus.jpg" />
+      <AvaloniaResource Include="Assets\gamingMus.jpg" />
+      <None Remove="Assets\fallback.jpg" />
+      <AvaloniaResource Include="Assets\fallback.jpg" />
     </ItemGroup>
 </Project>

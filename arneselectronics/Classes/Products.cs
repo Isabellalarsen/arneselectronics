@@ -12,17 +12,20 @@ public class Products
     public long EAN_Number { get; set; }
     public int ID { get; set; }
     public double ProductPrice { get; set; }
+    public string ImageFilePath { get; set; }
     
-    public string PictureFilePath { get; set; }
+   
     
     // Constructor 
-    public Products(string productName, string productDescription, long eanNumber, int id, double productPrice)
+    public Products(string productName, string productDescription, long eanNumber, int id, double productPrice , string imageFilePath)
     {
         this.ProductName = productName;
         this.ProductDescription = productDescription;
         this.EAN_Number = eanNumber;
         this.ID = id;
         this.ProductPrice = productPrice;
+        this.ImageFilePath = imageFilePath;
+      
     }
     public string Display(string display)
     {

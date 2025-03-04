@@ -42,7 +42,7 @@
                     <StackPanel>
                         <TextBlock Margin="5">This tab is for Stationære</TextBlock>
                         <ScrollViewer>
-                            <ItemsControl Name="ProductsList" >
+                            <ItemsControl Name="ProductsList" ItemsSource="">
                                 <ItemsControl.ItemsPanel>
                                     <ItemsPanelTemplate>
                                         <UniformGrid Columns="4"/>
@@ -53,9 +53,12 @@
                                         <!-- Display each product in a Border -->
                                         <Border Padding="5" BorderBrush="Gray" BorderThickness="1">
                                             <StackPanel>
+                                                <Image Source ='avares://arneselectronics/Assets/PC.jpg'></Image>
+                                               <!-- <Image Source='avares://arneselectronics/Assets/PC.jpg'></Image> -->
                                                 <TextBlock Text="{Binding ProductName}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
                                                 <TextBlock Text="{Binding ProductPrice}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
                                                 <TextBlock Text="{Binding ProductDescription}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
+                                                
                                             </StackPanel>
                                            
                                         </Border>
