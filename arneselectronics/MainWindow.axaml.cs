@@ -51,13 +51,13 @@ public partial class MainWindow : Window
             Quantity.Text += " 1";
             ImageHandler.LoadImage( this,"LogoImage", "avares://arneselectronics/Assets/testbillede1.jpg");
             ImageHandler.LoadImage( this, "CartLogo", "avares://arneselectronics/Assets/carticon.jpg");
-            ImageHandler.LoadImage(this , "PC" ,"avares://arneselectronics/Assets/PC.jpg" );
+            /*ImageHandler.LoadImage(this , "PC" ,"avares://arneselectronics/Assets/PC.jpg" );
             ImageHandler.LoadImage(this , "gamingMus" ,"avares://arneselectronics/Assets/gamingMus.jpg" );
             ImageHandler.LoadImage(this , "SSD" , "avares://arneselectronics/Assets/SSD.jpg" );
             ImageHandler.LoadImage(this , "RAMStick" , "avares://arneselectronics/Assets/RAMStick.jpg" );
             ImageHandler.LoadImage(this , "oldPC" , "avares://arneselectronics/Assets/oldPC.jpg");
-            ImageHandler.LoadImage(this , "MSI" ,"avares://arneselectronics/Assets/MSI.jpg" );
-            ImageHandler.LoadImage(this , "graphicsCard" , "avares://arneselectronics/Assets/graphicsCard.jpg" );
+            //ImageHandler.LoadImage(this , "MSI" ,"avares://arneselectronics/Assets/MSI.jpg" );
+            ImageHandler.LoadImage(this , "graphicsCard" , "avares://arneselectronics/Assets/graphicsCard.jpg" );*/
             
             
             

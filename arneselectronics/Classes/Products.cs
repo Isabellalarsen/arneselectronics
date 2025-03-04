@@ -1,41 +1,57 @@
-using System.Collections.ObjectModel;
-
-namespace arneselectronics;
+using Avalonia.Platform;
+using Avalonia.Media.Imaging;
 using System;
-using System.Collections.Generic;
+using System.IO;
 
-public class Products 
+namespace arneselectronics
 {
-    //Atributes 
-    public string ProductName { get; set; }
-    public string ProductDescription { get; set; }
-    public long EAN_Number { get; set; }
-    public int ID { get; set; }
-    public double ProductPrice { get; set; }
-    public string ImageFilePath { get; set; }
-    
-   
-    
-    // Constructor 
-    public Products(string productName, string productDescription, long eanNumber, int id, double productPrice , string imageFilePath)
+    public class Products 
     {
-        this.ProductName = productName;
-        this.ProductDescription = productDescription;
-        this.EAN_Number = eanNumber;
-        this.ID = id;
-        this.ProductPrice = productPrice;
-        this.ImageFilePath = imageFilePath;
-      
-    }
-    public string Display(string display)
-    {
-        if (display == "FrontPage")
+        public string ProductName { get; set; }
+        public string ProductDescription { get; set; }
+        public long EAN_Number { get; set; }
+        public int ID { get; set; }
+        public double ProductPrice { get; set; }
+        public string ImageFilePath { get; set; }
+
+        public Bitmap ProductImage
         {
-            return $"{ProductName}\n {ProductPrice.ToString()}";
+            get
+            {
+                try
+                {
+                    var uri = new Uri(ImageFilePath);
+                    using var stream = AssetLoader.Open(uri);
+                    return new Bitmap(stream);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Kunne ikke loade billede: {ImageFilePath} - {ex.Message}");
+                    return null;
+                }
+            }
         }
-        else
+
+        public Products(string productName, string productDescription, long eanNumber, int id, double productPrice, string imageFilePath)
         {
-            return $"{ProductName} \t {ProductPrice.ToString()} \n {ProductDescription} \n {EAN_Number.ToString()} \n {ID.ToString()} ";
+            ProductName = productName;
+            ProductDescription = productDescription;
+            EAN_Number = eanNumber;
+            ID = id;
+            ProductPrice = productPrice;
+            ImageFilePath = imageFilePath;
+        }
+
+        public string Display(string display)
+        {
+            if (display == "FrontPage")
+            {
+                return $"{ProductName}\n {ProductPrice}";
+            }
+            else
+            {
+                return $"{ProductName} \t {ProductPrice} \n {ProductDescription} \n {EAN_Number} \n {ID}";
+            }
         }
     }
 }

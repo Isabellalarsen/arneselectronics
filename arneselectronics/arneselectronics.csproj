@@ -39,7 +39,6 @@
       <None Remove="Assets\oldPC.jpg" />
       <AvaloniaResource Include="Assets\oldPC.jpg" />
       <None Remove="Assets\MSI.jpg" />
-      <AvaloniaResource Include="Assets\MSI.jpg" />
       <None Remove="Assets\graphicsCard.jpg" />
       <AvaloniaResource Include="Assets\graphicsCard.jpg" />
       <None Remove="Assets\gamingMus.jpg" />
