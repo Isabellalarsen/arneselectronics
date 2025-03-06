@@ -58,7 +58,6 @@
                                                 <TextBlock Text="{Binding ProductPrice}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
                                                 <TextBlock Text="{Binding ProductDescription}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
                                             </StackPanel>
-                                           
                                         </Border>
                                     </DataTemplate>
                                 </ItemsControl.ItemTemplate>
@@ -69,7 +68,28 @@
 
                 <TabItem Header="Bærbare">
                     <StackPanel>
-                        <TextBlock Margin="5">This tab is for Bærbare</TextBlock>
+                        <ScrollViewer>
+                            <ItemsControl Name="DesktopList" >
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <UniformGrid Columns="4"/>
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate x:DataType="local:Products">
+                                        <!-- Display each product in a Border -->
+                                        <Border Padding="5" BorderBrush="Gray" BorderThickness="1">
+                                            <StackPanel>
+                                                <Image Source="{Binding ProductImage}" Width="100" Height="100"/>
+                                                <TextBlock Text="{Binding ProductName}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
+                                                <TextBlock Text="{Binding ProductPrice}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
+                                                <TextBlock Text="{Binding ProductDescription}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
+                                            </StackPanel>
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </ScrollViewer>
                     </StackPanel>
                 </TabItem>
 
