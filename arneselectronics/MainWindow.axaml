@@ -29,11 +29,33 @@
             <!-- HeLLo With your ALl-->
             
             <Grid ColumnDefinitions="*,*">
-            <TabControl Grid.Column="0" >
+            <TabControl Grid.Column="0" Grid.Row="0" >
                 <!-- Tab Items grid -->
                 
                 <TabItem Header = "Forside">
                     <StackPanel>
+                        <ScrollViewer>
+                            <ItemsControl Name="ProductsListView" >
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <UniformGrid Columns="4"/>
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate x:DataType="local:Products">
+                                        <!-- Display each product in a Border -->
+                                        <Border Padding="5" BorderBrush="Gray" BorderThickness="1">
+                                            <StackPanel>
+                                                <Image Source="{Binding ProductImage}" Width="100" Height="100"/>
+                                                <TextBlock Text="{Binding ProductName}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
+                                                <TextBlock Text="{Binding ProductPrice}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
+                                                <TextBlock Text="{Binding ProductDescription}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
+                                            </StackPanel>
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </ScrollViewer>
                         <TextBlock> Velkommen til Arnes Elektronik</TextBlock>
                     </StackPanel>
                 </TabItem>
@@ -42,7 +64,7 @@
                     <StackPanel>
                         <TextBlock Margin="5">This tab is for Stationære</TextBlock>
                         <ScrollViewer>
-                            <ItemsControl Name="ProductsList" >
+                            <ItemsControl Name="DesktopListView" >
                                 <ItemsControl.ItemsPanel>
                                     <ItemsPanelTemplate>
                                         <UniformGrid Columns="4"/>
@@ -69,7 +91,7 @@
                 <TabItem Header="Bærbare">
                     <StackPanel>
                         <ScrollViewer>
-                            <ItemsControl Name="DesktopList" >
+                            <ItemsControl Name="LaptopListView" >
                                 <ItemsControl.ItemsPanel>
                                     <ItemsPanelTemplate>
                                         <UniformGrid Columns="4"/>
@@ -95,13 +117,55 @@
 
                 <TabItem Header="Hardware">
                     <StackPanel>
-                        <TextBlock Margin="5">This tab is for Hardware</TextBlock>
+                        <ScrollViewer>
+                            <ItemsControl Name="HardwareListView" >
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <UniformGrid Columns="4"/>
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate x:DataType="local:Products">
+                                        <!-- Display each product in a Border -->
+                                        <Border Padding="5" BorderBrush="Gray" BorderThickness="1">
+                                            <StackPanel>
+                                                <Image Source="{Binding ProductImage}" Width="100" Height="100"/>
+                                                <TextBlock Text="{Binding ProductName}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
+                                                <TextBlock Text="{Binding ProductPrice}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
+                                                <TextBlock Text="{Binding ProductDescription}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
+                                            </StackPanel>
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </ScrollViewer>
                     </StackPanel>
                 </TabItem>
 
                 <TabItem Header="Tilbehør">
                     <StackPanel>
-                        <TextBlock Margin="5">This tab is for Tilbehør</TextBlock>
+                        <ScrollViewer>
+                            <ItemsControl Name="AccessoriesListView" >
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <UniformGrid Columns="4"/>
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate x:DataType="local:Products">
+                                        <!-- Display each product in a Border -->
+                                        <Border Padding="5" BorderBrush="Gray" BorderThickness="1">
+                                            <StackPanel>
+                                                <Image Source="{Binding ProductImage}" Width="100" Height="100"/>
+                                                <TextBlock Text="{Binding ProductName}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
+                                                <TextBlock Text="{Binding ProductPrice}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
+                                                <TextBlock Text="{Binding ProductDescription}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
+                                            </StackPanel>
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </ScrollViewer>
                     </StackPanel>
                 </TabItem>
 
@@ -113,7 +177,7 @@
                 
             </TabControl>
                 
-                <TextBox Grid.Column="1" Height="0" Width="50" Watermark="Søg..."/>
+                <TextBox Grid.Column="1" Grid.Row="0" Height="0" Width="50" Watermark="Søg..."/>
 
                 
             </Grid>  
