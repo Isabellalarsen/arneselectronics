@@ -58,10 +58,6 @@ public partial class MainWindow : Window
             ImageHandler.LoadImage( this,"LogoImage", "avares://arneselectronics/Assets/testbillede1.jpg");
             ImageHandler.LoadImage( this, "CartLogo", "avares://arneselectronics/Assets/carticon.jpg");
             
-            
-            
-            
-            
         };
     }
 
