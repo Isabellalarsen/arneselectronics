@@ -7,11 +7,11 @@ using Avalonia.Collections;
 using Dapper;                          
 using Npgsql;                          
 
-namespace arneselectronics;
+/*namespace arneselectronics;
 
-public class GetProduct
+public class Productbob
 {
-Lists listInstance = new Lists();
+    Lists listInstance = new Lists();
 
     string conString = "Host=localhost;Username=postgres;Password=Lillemy97;Database=arne";
         
@@ -23,4 +23,4 @@ Lists listInstance = new Lists();
             listInstance.ProductsList.Add(product);                                               
         }                                                                                         
     } 
-}
+}*/

@@ -38,6 +38,33 @@ public partial class MainWindow : Window
             ImageHandler.LoadImage(this, "LogoImage", "avares://arneselectronics/Assets/testbillede1.jpg");
             ImageHandler.LoadImage(this, "CartLogo", "avares://arneselectronics/Assets/carticon.jpg");
         };
+       
+        string conString = "Host=localhost;Username=postgres;Password=Lillemy97;Database=arne";
+        
+        using (var con = new NpgsqlConnection(conString))                                             
+        {                                                                                             
+            var data = con.Query<Products>("SELECT * FROM products").ToList();                        
+            foreach (var product in data)                                                             
+            {                                                                                         
+                listInstance.ProductsList.Add(product);
+                if (product.Type == "desktop")
+                {
+                    listInstance.DesktopList.Add(product);
+                }
+                else if (product.Type == "laptop")
+                {
+                    listInstance.LaptopList.Add(product);
+                }
+                else if (product.Type == "hardware")        
+                {                                         
+                    listInstance.HardwareList.Add(product); 
+                }
+                else if (product.Type == "accessories")        
+                {                                         
+                    listInstance.AccessoriesList.Add(product); 
+                }                                         
+            }
+        } 
     }
 }
     
