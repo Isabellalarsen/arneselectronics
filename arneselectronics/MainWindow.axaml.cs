@@ -39,7 +39,7 @@ public partial class MainWindow : Window
             ImageHandler.LoadImage(this, "CartLogo", "avares://arneselectronics/Assets/carticon.jpg");
         };
        
-        string conString = "Host=localhost;Username=postgres;Password=Lillemy97;Database=arne";
+        string conString = "Host=localhost;Username=postgres;Password=2231Niklas;Database=arne";
         
         using (var con = new NpgsqlConnection(conString))                                             
         {                                                                                             

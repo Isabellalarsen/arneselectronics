@@ -11,11 +11,11 @@ namespace arneselectronics
         public string DescriptionPath { get; set; }
         public string EAN_Number { get; set; }
         public string ID { get; set; }
-        public string Price { get; set; }
+        public double Price { get; set; }
         public string? FilePath { get; set; }
         public string? Type { get; set; }
         public string? Manufacturer { get; set; }
-
+        
         public Bitmap? ProductImage
         {
             get
@@ -36,7 +36,7 @@ namespace arneselectronics
             } 
         }
 
-        public Products(string id, string name, string? manufacturer, string eanNumber, string price, string? type, string? filePath, string description)
+        public Products(string id, string name, string? manufacturer, string eanNumber, double price, string? type, string? filePath, string description)
         {
             ID = id;
             Name = name;
