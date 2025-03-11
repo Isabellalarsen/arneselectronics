@@ -2,9 +2,11 @@ using System.Collections.ObjectModel;
 
 namespace arneselectronics;
 
-public class Lists
+public class ListInizializer
 {
+    
     // Created new ObservableCollection of the type Products, added a get property to get collection content and instantiated the collection
+    // Lists are empty until filled by database when program is run
     public ObservableCollection<Products> ProductsList { get; } = new ObservableCollection<Products>
     {
     };

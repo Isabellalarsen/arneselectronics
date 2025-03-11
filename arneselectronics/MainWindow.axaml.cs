@@ -17,7 +17,7 @@ public partial class MainWindow : Window
         DataContext = this;
         
         //Instantiate lists to access from desktop from instance 
-        Lists listInstance = new Lists();
+        ListInizializer listInstance = new ListInizializer();
         //Links listInstance with ItemSource
         ProductsListView.ItemsSource = listInstance.ProductsList;
         DesktopListView.ItemsSource = listInstance.DesktopList;
@@ -39,7 +39,7 @@ public partial class MainWindow : Window
             ImageHandler.LoadImage(this, "CartLogo", "avares://arneselectronics/Assets/carticon.jpg");
         };
        
-        string conString = "Host=localhost;Username=postgres;Password=Lillemy97;Database=arne";
+        string conString = "Host=localhost;Username=postgres;Password=Nomoregangs_090103;Database=arne";
         
         using (var con = new NpgsqlConnection(conString))                                             
         {                                                                                             
