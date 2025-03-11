@@ -84,4 +84,8 @@
       <None Remove="Assets\hero12.jpg" />
       <AvaloniaResource Include="Assets\hero12.jpg" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="PDPView.axaml.cs" />
+    </ItemGroup>
 </Project>
