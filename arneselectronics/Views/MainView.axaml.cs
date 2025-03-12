@@ -9,9 +9,9 @@ using Npgsql;
 
 namespace arneselectronics;
 
-public partial class MainWindow : Window
+public partial class MainView : Window
 {
-    public MainWindow()
+    public MainView()
     {
         InitializeComponent();
         DataContext = this;
@@ -39,7 +39,7 @@ public partial class MainWindow : Window
             ImageHandler.LoadImage(this, "CartLogo", "avares://arneselectronics/Assets/carticon.jpg");
         };
        
-        string conString = "Host=localhost;Username=postgres;Password=Nomoregangs_090103;Database=arne";
+        string conString = "Host=localhost;Username=postgres;Password=Aebea2602$;Database=arneselectronics";
         
         using (var con = new NpgsqlConnection(conString))                                             
         {                                                                                             

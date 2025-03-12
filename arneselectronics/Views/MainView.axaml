@@ -3,13 +3,24 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:arneselectronics"
-        DataContext="{Binding RelativeSource={RelativeSource Self}}"
         mc:Ignorable="d" d:DesignWidth="" d:DesignHeight=""
-        x:Class="arneselectronics.MainWindow"
+        x:Class="arneselectronics.MainView"
+        xmlns:vm="clr-namespace:arneselectronics.ViewModels"
+        xmlns:view="clr-namespace:arneselectronics.Views"
+        x:DataType="vm:MainViewModel"
         Title="arneselectronics">
-<!--Hej-->
+        <Design.DataContext><vm:MainViewModel></vm:MainViewModel></Design.DataContext> <!-- This lets us the the preview of our program-->
+    <!--Hej-->
     
         <StackPanel>
+            <Grid ColumnDefinitions="*,*,*,*,*,*">
+                <Button Grid.Column="0" Command="{Binding GoToHomeCommand}">Forside</Button>
+                <Button Grid.Column="1" Command="{Binding GoToHardwareCommand}">Hardware</Button>
+                <Button Grid.Column="2" Command="{Binding GoToStationærCommand}">Stationær</Button>  
+                <Button Grid.Column="3" Command="{Binding GoToTilbehørCommand}">Tilbehør</Button> 
+                <Button Grid.Column="4" Command="{Binding GoToVidenCommand}">Viden</Button> 
+                <Button Grid.Column="5" Command="{Binding GoToBærbareCommand}">Bærbar</Button> 
+            </Grid>
             <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*,*,Auto">
                 <!-- Add Image control for Logo -->
                 <Image HorizontalAlignment="Left" Grid.Column="0" x:Name="LogoImage" Width="200" Height="100" Margin="10"/>
@@ -59,8 +70,9 @@
                     </StackPanel>
                 </TabItem>
                 
-                <TabItem Header="Stationære">
+                <TabItem  Header="Stationære">
                     <StackPanel>
+                        <ContentControl Content="{Binding CurrentPage}" />
                         <TextBlock Margin="5">This tab is for Stationære</TextBlock>
                         <ScrollViewer>
                             <ItemsControl Name="DesktopListView" >
