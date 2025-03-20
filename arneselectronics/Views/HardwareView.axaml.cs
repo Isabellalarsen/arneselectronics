@@ -14,6 +14,5 @@ public partial class HardwareView : UserControl
         InitializeComponent();
         ListInitializer listInstance = ListInitializer.Instance;
         HardwareListView.ItemsSource = listInstance.HardwareList;
-        listInstance.LoadProductsFromDatabase();
     }
     }

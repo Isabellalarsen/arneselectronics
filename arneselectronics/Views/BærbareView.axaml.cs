@@ -14,6 +14,5 @@ public partial class BærbareView : UserControl
         InitializeComponent();
         ListInitializer listInstance = ListInitializer.Instance;
         LaptopListView.ItemsSource = listInstance.LaptopList;
-        listInstance.LoadProductsFromDatabase();
     }
     }

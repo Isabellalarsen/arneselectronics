@@ -14,6 +14,5 @@ public partial class TilbehørView : UserControl
         InitializeComponent();
         ListInitializer listInstance = ListInitializer.Instance;
         AccessoriesListView.ItemsSource = listInstance.AccessoriesList;
-        listInstance.LoadProductsFromDatabase();
     }
     }

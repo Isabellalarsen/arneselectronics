@@ -9,7 +9,7 @@ using Npgsql;
 
 
 namespace arneselectronics;
-
+//Singleton class to initialize Lists and load data
 public class ListInitializer
 {
     public static ListInitializer Instance { get; } = new ListInitializer();
@@ -21,7 +21,6 @@ public class ListInitializer
     public ObservableCollection<Products> AccessoriesList { get; } = new();
 
     private ListInitializer() { }
-
     public void LoadProductsFromDatabase()
     {
         string conString = "Host=localhost;Username=postgres;Password=2231Niklas;Database=arne";

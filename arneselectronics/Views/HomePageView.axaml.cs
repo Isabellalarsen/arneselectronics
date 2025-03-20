@@ -14,6 +14,5 @@ public partial class HomePageView : UserControl
         InitializeComponent();
         ListInitializer listInstance = ListInitializer.Instance;
         ProductsListView.ItemsSource = listInstance.ProductsList;
-        listInstance.LoadProductsFromDatabase();
     }
     }

@@ -15,11 +15,12 @@ public partial class MainView : Window
     {
         InitializeComponent();
         DataContext = this;
-        //Instantiate lists to access from desktop from instance 
-        //Links listInstance with ItemSource
+        ListInitializer listInitializer = ListInitializer.Instance;
+        
         // Directly load the logos when the window is initialized
         this.Loaded += (_, _) =>
         {
+            listInitializer.LoadProductsFromDatabase();
             // Remember to add Resources to Avalonia 
             var ImageHandler = new ImageHandler();
             Console.WriteLine("Window Loaded!");
