@@ -9,7 +9,7 @@
         xmlns:view="clr-namespace:arneselectronics.Views"
         x:DataType="vm:MainViewModel"
         Title="arneselectronics">
-        <Design.DataContext><vm:MainViewModel></vm:MainViewModel></Design.DataContext> <!-- This lets us the the preview of our program-->
+        <Design.DataContext><vm:MainViewModel></vm:MainViewModel></Design.DataContext> <!-- This lets us see the preview of our program-->
     <!--Hej-->
     
         <StackPanel>
@@ -28,7 +28,7 @@
                 <!-- Cart logo on the right -->
                 <Image Grid.Column="1" HorizontalAlignment="Right" x:Name="CartLogo" Width="50" Height="60" Margin="10"/>
 
-    
+            </Grid>
                 <!-- TextBlock for the total in the middle column -->
 
                 <StackPanel Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10">
@@ -36,166 +36,8 @@
                     <TextBlock Height="15" Name="Quantity" Text="Antal varer:"> </TextBlock>
                 </StackPanel>
 
-            </Grid>
-            <!-- HeLLo With your ALl-->
-            
-            <Grid ColumnDefinitions="*,*">
-            <TabControl Grid.Column="0" Grid.Row="0" >
-                <!-- Tab Items grid -->
-                
-                <TabItem Header = "Forside">
-                    <StackPanel>
-                        <ScrollViewer>
-                            <ItemsControl Name="ProductsListView" >
-                                <ItemsControl.ItemsPanel>
-                                    <ItemsPanelTemplate>
-                                        <UniformGrid Columns="4"/>
-                                    </ItemsPanelTemplate>
-                                </ItemsControl.ItemsPanel>
-                                <ItemsControl.ItemTemplate>
-                                    <DataTemplate x:DataType="local:Products">
-                                        <!-- Display each product in a Border -->
-                                        <Border Padding="5" BorderBrush="Gray" BorderThickness="1">
-                                            <StackPanel>
-                                                <Image Source="{Binding ProductImage}" Width="100" Height="100"/>
-                                                <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
-                                                <TextBlock Text="{Binding Price}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
-                                            </StackPanel>
-                                        </Border>
-                                    </DataTemplate>
-                                </ItemsControl.ItemTemplate>
-                            </ItemsControl>
-                        </ScrollViewer>
-                        <TextBlock> Velkommen til Arnes Elektronik</TextBlock>
-                    </StackPanel>
-                </TabItem>
-                
-                <TabItem  Header="Stationære">
-                    <StackPanel>
-                        <ContentControl Content="{Binding CurrentPage}" />
-                        <TextBlock Margin="5">This tab is for Stationære</TextBlock>
-                        <ScrollViewer>
-                            <ItemsControl Name="DesktopListView" >
-                                <ItemsControl.ItemsPanel>
-                                    <ItemsPanelTemplate>
-                                        <UniformGrid Columns="4"/>
-                                    </ItemsPanelTemplate>
-                                </ItemsControl.ItemsPanel>
-                                <ItemsControl.ItemTemplate>
-                                    <DataTemplate x:DataType="local:Products">
-                                        <!-- Display each product in a Border -->
-                                        <Border Padding="5" BorderBrush="Gray" BorderThickness="1">
-                                            <StackPanel>
-                                                <Image Source="{Binding ProductImage}" Width="100" Height="100"/>
-                                                <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
-                                                <TextBlock Text="{Binding Price}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
-                                            </StackPanel>
-                                        </Border>
-                                    </DataTemplate>
-                                </ItemsControl.ItemTemplate>
-                            </ItemsControl>
-                        </ScrollViewer>
-                    </StackPanel>
-                </TabItem>
-
-                <TabItem Header="Bærbare">
-                    <StackPanel>
-                        <ScrollViewer>
-                            <ItemsControl Name="LaptopListView" >
-                                <ItemsControl.ItemsPanel>
-                                    <ItemsPanelTemplate>
-                                        <UniformGrid Columns="4"/>
-                                    </ItemsPanelTemplate>
-                                </ItemsControl.ItemsPanel>
-                                <ItemsControl.ItemTemplate>
-                                    <DataTemplate x:DataType="local:Products">
-                                        <!-- Display each product in a Border -->
-                                        <Border Padding="5" BorderBrush="Gray" BorderThickness="1">
-                                            <StackPanel>
-                                                <Image Source="{Binding ProductImage}" Width="100" Height="100"/>
-                                                <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
-                                                <TextBlock Text="{Binding Price}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
-                                            </StackPanel>
-                                        </Border>
-                                    </DataTemplate>
-                                </ItemsControl.ItemTemplate>
-                            </ItemsControl>
-                        </ScrollViewer>
-                    </StackPanel>
-                </TabItem>
-
-                <TabItem Header="Hardware">
-                    <StackPanel>
-                        <ScrollViewer>
-                            <ItemsControl Name="HardwareListView" >
-                                <ItemsControl.ItemsPanel>
-                                    <ItemsPanelTemplate>
-                                        <UniformGrid Columns="4"/>
-                                    </ItemsPanelTemplate>
-                                </ItemsControl.ItemsPanel>
-                                <ItemsControl.ItemTemplate>
-                                    <DataTemplate x:DataType="local:Products">
-                                        <!-- Display each product in a Border -->
-                                        <Border Padding="5" BorderBrush="Gray" BorderThickness="1">
-                                            <StackPanel>
-                                                <Image Source="{Binding ProductImage}" Width="100" Height="100"/>
-                                                <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
-                                                <TextBlock Text="{Binding Price}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
-                                            </StackPanel>
-                                        </Border>
-                                    </DataTemplate>
-                                </ItemsControl.ItemTemplate>
-                            </ItemsControl>
-                        </ScrollViewer>
-                    </StackPanel>
-                </TabItem>
-
-                <TabItem Header="Tilbehør">
-                    <StackPanel>
-                        <ScrollViewer>
-                            <ItemsControl Name="AccessoriesListView" >
-                                <ItemsControl.ItemsPanel>
-                                    <ItemsPanelTemplate>
-                                        <UniformGrid Columns="4"/>
-                                    </ItemsPanelTemplate>
-                                </ItemsControl.ItemsPanel>
-                                <ItemsControl.ItemTemplate>
-                                    <DataTemplate x:DataType="local:Products">
-                                        <!-- Display each product in a Border -->
-                                        <Border Padding="5" BorderBrush="Gray" BorderThickness="1">
-                                            <StackPanel>
-                                                <Image Source="{Binding ProductImage}" Width="100" Height="100"/>
-                                                <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
-                                                <TextBlock Text="{Binding Price}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
-                                            </StackPanel>
-                                        </Border>
-                                    </DataTemplate>
-                                </ItemsControl.ItemTemplate>
-                            </ItemsControl>
-                        </ScrollViewer>
-                    </StackPanel>
-                </TabItem>
-
-                <TabItem Header="Viden">
-                    <StackPanel>
-                        <TextBlock Margin="5">This tab is for Viden</TextBlock>
-                    </StackPanel>
-                </TabItem>
-                
-            </TabControl>
-                
-                <TextBox Grid.Column="1" Grid.Row="0" Height="0" Width="50" Watermark="Søg..."/>
-
-                
-            </Grid>  
-            
-            <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*,*,*,*,*,*">
-                <TextBlock Grid.Column="0" Grid.Row="0" Name="Product1NameTextBlock"></TextBlock>
-                <TextBlock Grid.Column="1" Grid.Row="0" Name="Product2NameTextBlock" ></TextBlock>
-            </Grid>
-            
- 
-                
+                <ContentControl Content="{Binding CurrentPage}" ></ContentControl>
         </StackPanel>
  
 </Window>
+
