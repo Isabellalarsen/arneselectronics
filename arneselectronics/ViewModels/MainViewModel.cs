@@ -18,6 +18,7 @@ public partial class MainViewModel : ViewModelBase
     private readonly StationærViewModel stationærPage = new StationærViewModel();
     private readonly VidenViewModel videnPage = new VidenViewModel();
     private readonly HardwareViewModel hardwarePage = new HardwareViewModel();
+    private readonly ProductDetailPageViewModel productDetailPage = new ProductDetailPageViewModel();
 
     public MainViewModel()
     {
@@ -40,5 +41,8 @@ public partial class MainViewModel : ViewModelBase
   
     [RelayCommand]
     private void GoToHardware() => CurrentPage = hardwarePage;
+    
+    [RelayCommand]
+    private void GoToProductDetailPage() => CurrentPage = productDetailPage;
    
 }
