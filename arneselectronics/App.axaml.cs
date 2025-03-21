@@ -1,3 +1,4 @@
+using arneselectronics.ViewModels;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
@@ -18,8 +19,11 @@ public partial class App : Application
         // Set up the MainWindow
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-            var mainWindow = new MainWindow();
-            desktop.MainWindow = mainWindow;
+
+            desktop.MainWindow = new MainView
+            {
+                DataContext = new MainViewModel() // This sets out DataContext in the backend instead of in the XAML
+            };
 
             // You no longer need to load the logo here
             // All logo loading is handled in MainWindow

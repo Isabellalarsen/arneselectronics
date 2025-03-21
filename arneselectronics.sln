@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arneselectronics", "arneselectronics\arneselectronics.csproj", "{284F4FDF-3434-4B13-A2C8-FFDBB1A2D0BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arneselectronics.Tests", "arneselectronics.Tests\arneselectronics.Tests.csproj", "{A4BA69A2-8CBE-4176-AF75-383EC8E5FB33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{284F4FDF-3434-4B13-A2C8-FFDBB1A2D0BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{284F4FDF-3434-4B13-A2C8-FFDBB1A2D0BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{284F4FDF-3434-4B13-A2C8-FFDBB1A2D0BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4BA69A2-8CBE-4176-AF75-383EC8E5FB33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4BA69A2-8CBE-4176-AF75-383EC8E5FB33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4BA69A2-8CBE-4176-AF75-383EC8E5FB33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4BA69A2-8CBE-4176-AF75-383EC8E5FB33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
