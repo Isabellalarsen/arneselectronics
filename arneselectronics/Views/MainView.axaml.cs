@@ -13,6 +13,7 @@ public partial class MainView : Window
 {
     public MainView()
     {
+        // Test comment
         InitializeComponent();
         DataContext = this;
         ListInitializer listInitializer = ListInitializer.Instance;
