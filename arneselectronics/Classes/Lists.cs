@@ -3,6 +3,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System.Linq;
+using arneselectronics.Crendentials;
 using Avalonia.Collections;
 using Dapper;
 using Npgsql;
@@ -23,7 +24,8 @@ public class ListInitializer
     private ListInitializer() { }
     public void LoadProductsFromDatabase()
     {
-        string conString = "Host=localhost;Username=postgres;Password=2231Niklas;Database=arne";
+        Credentials credentials = new();
+        string conString = credentials.Database;
 
         using (var con = new NpgsqlConnection(conString))
         {
