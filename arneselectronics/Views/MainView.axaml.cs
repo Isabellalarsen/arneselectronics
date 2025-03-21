@@ -14,6 +14,7 @@ public partial class MainView : Window
     public MainView()
     {
         // Test comment
+        // Test comment 2
         InitializeComponent();
         DataContext = this;
         ListInitializer listInitializer = ListInitializer.Instance;
