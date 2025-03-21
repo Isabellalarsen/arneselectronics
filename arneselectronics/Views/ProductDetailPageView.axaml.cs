@@ -1,20 +1,26 @@
 using System;
-using arneselectronics.ViewModels;
-using Avalonia;
+using arneselectronics;  // Importer Products-klassen
 using Avalonia.Controls;
-using Avalonia.Markup.Xaml;
+using Avalonia.Interactivity;
 
-namespace arneselectronics.Views;
-
-public partial class ProductDetailPageView : UserControl
+namespace arneselectronics.Views
 {
-    public Products Product { get; set; }
-    
-    public ProductDetailPageView()
+    public partial class ProductDetailPageView : UserControl
     {
-        InitializeComponent();
-        DataContext = this;
-        Product = ListInitializer.Instance.ProductsList[0];
-        Console.WriteLine(Product.Name);
+        public Products Product { get; set; }
+
+        public ProductDetailPageView(Products product)
+        {
+            InitializeComponent();
+            Product = product;
+            TextBlockName.Text = Product.Name;
+            TextBlockPrice.Text = Product.Price.ToString();
+            Image.Source = Product.ProductImage;
+            DataContext = Product; 
+
+            Console.WriteLine(Product.Name);
+        }
+
+
     }
 }

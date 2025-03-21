@@ -19,11 +19,13 @@
                     <DataTemplate x:DataType="local:Products">
                         <!-- Display each product in a Border -->
                         <Border Padding="5" BorderBrush="Gray" BorderThickness="1">
-                            <StackPanel>
-                                <Image Source="{Binding ProductImage}" Width="100" Height="100"/>
-                                <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
-                                <TextBlock Text="{Binding Price}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
-                            </StackPanel>
+                            <Button CommandParameter="{Binding  }" Click="Button_OnClick">
+                                <StackPanel>
+                                    <Image Source="{Binding ProductImage}" Width="100" Height="100"/>
+                                    <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
+                                    <TextBlock Text="{Binding Price}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
+                                </StackPanel>
+                            </Button>
                         </Border>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>

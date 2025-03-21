@@ -5,12 +5,15 @@
              xmlns:local="clr-namespace:arneselectronics"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="arneselectronics.Views.ProductDetailPageView"
-             >
-    <Border Padding="5" BorderBrush="Gray" BorderThickness="1">
+             x:DataType="local:Products">
 
-                <StackPanel>
-                        <TextBlock Text="{Binding Name}"></TextBlock>
-                </StackPanel>
+    <Border Padding="5" BorderBrush="Gray" BorderThickness="1">
+        <StackPanel>
+            <TextBlock Name="TextBlockName" FontSize="16" FontWeight="Bold" Foreground="Black"/>
+            <TextBlock Name="TextBlockPrice"/>
+            <Image Name="Image" Width="100" Height="100"></Image>
+                
+        </StackPanel>
     </Border>
 
 </UserControl>

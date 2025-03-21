@@ -43,6 +43,6 @@ public partial class MainViewModel : ViewModelBase
     private void GoToHardware() => CurrentPage = hardwarePage;
     
     [RelayCommand]
-    private void GoToProductDetailPage() => CurrentPage = productDetailPage;
+    public void GoToProductDetailPage() => CurrentPage = productDetailPage;
    
 }
