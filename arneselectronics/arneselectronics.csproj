@@ -88,4 +88,8 @@
     <ItemGroup>
       <Compile Remove="PDPView.axaml.cs" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Crendentials\" />
+    </ItemGroup>
 </Project>

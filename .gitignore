@@ -3,10 +3,9 @@ obj/
 
 riderModule.iml
 /_ReSharper.Caches/
-
+Credentials/
 *.ddl
 *.exe
 *.pnb
 *.log
-
 .env
