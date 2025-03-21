@@ -13,6 +13,6 @@ public partial class StationærView : UserControl
     {
         InitializeComponent();
         ListInitializer listInstance = ListInitializer.Instance;
-        DesktopListView.ItemsSource = listInstance.DesktopList;
+        DesktopListView.ItemsSource = listInstance.DesktopList; 
     }
 }
