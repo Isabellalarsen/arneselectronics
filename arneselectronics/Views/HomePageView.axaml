@@ -29,7 +29,7 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </ScrollViewer>
-        <TextBlock> Velkommen til Arnes Elektronik</TextBlock>
+        <TextBlock> Welcome to Arne's Electronics</TextBlock>
     </StackPanel>
 </UserControl>
 

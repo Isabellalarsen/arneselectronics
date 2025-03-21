@@ -7,12 +7,12 @@ using System.Linq;
 
 namespace arneselectronics.Views;
 
-public partial class BærbareView : UserControl
+public partial class AccessoriesView : UserControl
 {
-    public BærbareView()
+    public AccessoriesView()
     {
         InitializeComponent();
         ListInitializer listInstance = ListInitializer.Instance;
-        LaptopListView.ItemsSource = listInstance.LaptopList;
+        AccessoriesListView.ItemsSource = listInstance.AccessoriesList;
     }
     }

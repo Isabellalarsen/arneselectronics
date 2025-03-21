@@ -7,9 +7,9 @@ using System.Linq;
 
 namespace arneselectronics.Views;
 
-public partial class StationærView : UserControl
+public partial class DesktopView : UserControl
 {
-    public StationærView()
+    public DesktopView()
     {
         InitializeComponent();
         ListInitializer listInstance = ListInitializer.Instance;

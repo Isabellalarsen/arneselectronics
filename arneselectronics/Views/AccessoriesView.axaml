@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:arneselectronics"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="arneselectronics.Views.TilbehørView">
+             x:Class="arneselectronics.Views.AccessoriesView">
     <StackPanel>
         <ScrollViewer>
             <ItemsControl Name="AccessoriesListView" >

@@ -1,6 +1,6 @@
 namespace arneselectronics.ViewModels;
 
-public partial class VidenViewModel : ViewModelBase
+public partial class ResourcesViewModel : ViewModelBase
 {
    string Test {get;set;} 
 }

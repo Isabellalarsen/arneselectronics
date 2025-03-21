@@ -1,6 +1,6 @@
 namespace arneselectronics.ViewModels;
 
-public partial class TilbehørViewModel : ViewModelBase
+public partial class AccessoriesViewModel : ViewModelBase
 {
     string Test {get;set;}
 }

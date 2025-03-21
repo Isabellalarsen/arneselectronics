@@ -4,11 +4,10 @@ using Avalonia.Markup.Xaml;
 
 namespace arneselectronics.Views;
 
-public partial class VidenView : UserControl
+public partial class CartView : UserControl
 {
-    public VidenView()
+    public CartView()
     {
         InitializeComponent();
-        ListInitializer listInstance = ListInitializer.Instance;
-    } 
     }
+}

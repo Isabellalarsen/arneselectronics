@@ -8,6 +8,7 @@
         <entry key="arneselectronics/MainWindow-Joakims-PC.axaml" value="arneselectronics/arneselectronics.csproj" />
         <entry key="arneselectronics/MainWindow.axaml" value="arneselectronics/arneselectronics.csproj" />
         <entry key="arneselectronics/Views/BærbareView.axaml" value="arneselectronics/arneselectronics.csproj" />
+        <entry key="arneselectronics/Views/CartView.axaml" value="arneselectronics/arneselectronics.csproj" />
         <entry key="arneselectronics/Views/HardwareView.axaml" value="arneselectronics/arneselectronics.csproj" />
         <entry key="arneselectronics/Views/HomePageView.axaml" value="arneselectronics/arneselectronics.csproj" />
         <entry key="arneselectronics/Views/MainView.axaml" value="arneselectronics/arneselectronics.csproj" />

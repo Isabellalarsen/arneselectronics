@@ -3,7 +3,7 @@ using Avalonia.Interactivity;
 
 namespace arneselectronics;
 
-public class BasketButton
+public class CartButton
 {
     private int total = 0;
     private int quantity = 0;
@@ -11,7 +11,7 @@ public class BasketButton
     private TextBlock Total;
     private TextBlock Quantity;
 
-    public BasketButton(TextBlock total, TextBlock quantity)
+    public CartButton(TextBlock total, TextBlock quantity)
     {
         Total = total;
         Quantity = quantity;

@@ -4,9 +4,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:arneselectronics"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="arneselectronics.Views.VidenView">
-    
-    <StackPanel>
-        <Label>Velkommen til den store viden om hardware, compututere og meget andet :)</Label>
-    </StackPanel>
+             x:Class="arneselectronics.Views.CartView">
+    Welcome to Avalonia!
 </UserControl>

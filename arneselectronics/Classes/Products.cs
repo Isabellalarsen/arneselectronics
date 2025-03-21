@@ -28,7 +28,7 @@ namespace arneselectronics
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Kunne ikke loade billede: {FilePath} - {ex.Message}");
+                    Console.WriteLine($"Could not load image.: {FilePath} - {ex.Message}");
                     var uri = new Uri("avares://arneselectronics/Assets/fallback.jpg");
                     using var stream = AssetLoader.Open(uri);
                     return new Bitmap(stream);

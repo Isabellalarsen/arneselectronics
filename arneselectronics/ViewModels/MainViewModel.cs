@@ -13,11 +13,12 @@ public partial class MainViewModel : ViewModelBase
     private ViewModelBase currentPage;
     
     private readonly HomePageViewModel homePage = new HomePageViewModel();
-    private readonly BærbareViewModel bærbarePage = new BærbareViewModel();
-    private readonly TilbehørViewModel tilbehørPage= new TilbehørViewModel();
-    private readonly StationærViewModel stationærPage = new StationærViewModel();
-    private readonly VidenViewModel videnPage = new VidenViewModel();
+    private readonly LaptopViewModel _laptopPage = new LaptopViewModel();
+    private readonly AccessoriesViewModel accessoriesPage= new AccessoriesViewModel();
+    private readonly DesktopViewModel desktopPage = new DesktopViewModel();
+    private readonly ResourcesViewModel resourcePage = new ResourcesViewModel();
     private readonly HardwareViewModel hardwarePage = new HardwareViewModel();
+    private readonly CartViewModel cartPage = new CartViewModel();
 
     public MainViewModel()
     {
@@ -27,18 +28,20 @@ public partial class MainViewModel : ViewModelBase
     private void GoToHome() =>  CurrentPage = homePage;
     
     [RelayCommand]
-    private void GoToBærbare() =>  CurrentPage = bærbarePage;
+    private void GoToLaptop() =>  CurrentPage = _laptopPage;
    
     [RelayCommand]
-    private void GoToTilbehør() => CurrentPage = tilbehørPage;
+    private void GoToAccessories() => CurrentPage = accessoriesPage;
    
     [RelayCommand]
-    private void GoToStationær() => CurrentPage = stationærPage;
+    private void GoToDesktop() => CurrentPage = desktopPage;
  
     [RelayCommand]
-    private void GoToViden() => CurrentPage = videnPage;
+    private void GoToResource() => CurrentPage = resourcePage;
   
     [RelayCommand]
     private void GoToHardware() => CurrentPage = hardwarePage;
    
+    [RelayCommand]
+    private void GoToCart() => CurrentPage = cartPage;
 }
