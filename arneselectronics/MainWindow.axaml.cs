@@ -3,6 +3,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System.Linq;
+using arneselectronics.Crendentials;
 using Avalonia.Collections;
 using Dapper;
 using Npgsql;
@@ -38,8 +39,8 @@ public partial class MainWindow : Window
             ImageHandler.LoadImage(this, "LogoImage", "avares://arneselectronics/Assets/testbillede1.jpg");
             ImageHandler.LoadImage(this, "CartLogo", "avares://arneselectronics/Assets/carticon.jpg");
         };
-       
-        string conString = "Host=localhost;Username=postgres;Password=Nomoregangs_090103;Database=arne";
+        Credentials credentials = new Credentials();
+        string conString = credentials.Database;
         
         using (var con = new NpgsqlConnection(conString))                                             
         {                                                                                             
