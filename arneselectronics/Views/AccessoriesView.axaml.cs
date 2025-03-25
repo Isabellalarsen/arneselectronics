@@ -16,4 +16,4 @@ public partial class AccessoriesView : UserControl
         ListInitializer listInstance = ListInitializer.Instance;
         AccessoriesListView.ItemsSource = listInstance.AccessoriesList;
     }
-    }
+}
