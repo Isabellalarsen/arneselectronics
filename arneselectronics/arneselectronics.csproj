@@ -92,5 +92,8 @@
         <DependentUpon>MainView.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
+      <Compile Update="Views\AccessoriesView.axaml.cs">
+        <DependentUpon>AccessoriesView.axaml</DependentUpon>
+      </Compile>
     </ItemGroup>
 </Project>
