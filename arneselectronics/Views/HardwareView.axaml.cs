@@ -15,4 +15,4 @@ public partial class HardwareView : UserControl
         ListInitializer listInstance = ListInitializer.Instance;
         HardwareListView.ItemsSource = listInstance.HardwareList;
     }
-    }
+}

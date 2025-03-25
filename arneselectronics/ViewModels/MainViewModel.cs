@@ -1,6 +1,9 @@
+using arneselectronics;
 using arneselectronics.Views;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using arneselectronics.Views;
+using arneselectronics.ViewModels;
 
 namespace arneselectronics.ViewModels;
 
@@ -13,13 +16,13 @@ public partial class MainViewModel : ViewModelBase
     private ViewModelBase currentPage;
     
     private readonly HomePageViewModel homePage = new HomePageViewModel();
-    private readonly LaptopViewModel _laptopPage = new LaptopViewModel();
-    private readonly AccessoriesViewModel accessoriesPage= new AccessoriesViewModel();
-    private readonly DesktopViewModel desktopPage = new DesktopViewModel();
-    private readonly ResourcesViewModel resourcePage = new ResourcesViewModel();
+    private readonly BærbareViewModel bærbarePage = new BærbareViewModel();
+    private readonly TilbehørViewModel tilbehørPage= new TilbehørViewModel();
+    private readonly StationærViewModel stationærPage = new StationærViewModel();
+    private readonly VidenViewModel videnPage = new VidenViewModel();
     private readonly HardwareViewModel hardwarePage = new HardwareViewModel();
-    private readonly CartViewModel cartPage = new CartViewModel();
-
+    private readonly ProductDetailPageViewModel productDetailPage = new ProductDetailPageViewModel();
+    
     public MainViewModel()
     {
         CurrentPage = homePage;
@@ -28,20 +31,21 @@ public partial class MainViewModel : ViewModelBase
     private void GoToHome() =>  CurrentPage = homePage;
     
     [RelayCommand]
-    private void GoToLaptop() =>  CurrentPage = _laptopPage;
+    private void GoToBærbare() =>  CurrentPage = bærbarePage;
    
     [RelayCommand]
-    private void GoToAccessories() => CurrentPage = accessoriesPage;
+    private void GoToTilbehør() => CurrentPage = tilbehørPage;
    
     [RelayCommand]
-    private void GoToDesktop() => CurrentPage = desktopPage;
+    private void GoToStationær() => CurrentPage = stationærPage;
  
     [RelayCommand]
-    private void GoToResource() => CurrentPage = resourcePage;
+    private void GoToViden() => CurrentPage = videnPage;
   
     [RelayCommand]
     private void GoToHardware() => CurrentPage = hardwarePage;
-   
+    
     [RelayCommand]
-    private void GoToCart() => CurrentPage = cartPage;
+    public void GoToProductDetailPage() => CurrentPage = productDetailPage;
+   
 }
