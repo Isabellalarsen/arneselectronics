@@ -6,6 +6,8 @@ using System.Linq;
 using Avalonia.Collections;
 using Dapper;
 using Npgsql;
+using arneselectronics.ViewModels;
+
 
 namespace arneselectronics;
 

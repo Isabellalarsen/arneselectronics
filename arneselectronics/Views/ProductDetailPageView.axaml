@@ -1,19 +1,14 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:local="clr-namespace:arneselectronics"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:vm="clr-namespace:arneselectronics.ViewModels"
              x:Class="arneselectronics.Views.ProductDetailPageView"
-             x:DataType="local:Products">
-
-    <Border Padding="5" BorderBrush="Gray" BorderThickness="1">
-        <StackPanel>
-            <TextBlock Name="TextBlockName" FontSize="16" FontWeight="Bold" Foreground="Black"/>
-            <TextBlock Name="TextBlockPrice"/>
-            <Image Name="Image" Width="100" Height="100"></Image>
-                
-        </StackPanel>
-    </Border>
+             x:DataType="vm:ProductDetailPageViewModel">
+  
+    <StackPanel>
+        <TextBlock Text="{Binding Product.Name, FallbackValue='Produktnavn ikke fundet'}"/>
+        <TextBlock Text="{Binding Product.Price}"></TextBlock>
+        <Image Source="{Binding Product.ProductImage}"></Image>
+        
+    </StackPanel>
 
 </UserControl>

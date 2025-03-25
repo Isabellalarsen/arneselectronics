@@ -4,6 +4,7 @@ using Avalonia.Markup.Xaml;
 using Dapper;
 using Npgsql;
 using System.Linq;
+using arneselectronics;
 
 namespace arneselectronics.Views;
 

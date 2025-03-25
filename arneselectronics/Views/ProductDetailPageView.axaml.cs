@@ -1,26 +1,14 @@
-using System;
-using arneselectronics;  // Importer Products-klassen
+using arneselectronics;
 using Avalonia.Controls;
-using Avalonia.Interactivity;
+using arneselectronics.ViewModels;
 
 namespace arneselectronics.Views
 {
     public partial class ProductDetailPageView : UserControl
     {
-        public Products Product { get; set; }
-
-        public ProductDetailPageView(Products product)
+        public ProductDetailPageView()
         {
             InitializeComponent();
-            Product = product;
-            TextBlockName.Text = Product.Name;
-            TextBlockPrice.Text = Product.Price.ToString();
-            Image.Source = Product.ProductImage;
-            DataContext = Product; 
-
-            Console.WriteLine(Product.Name);
         }
-
-
     }
 }

@@ -1,6 +1,9 @@
+using arneselectronics;
 using arneselectronics.Views;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using arneselectronics.Views;
+using arneselectronics.ViewModels;
 
 namespace arneselectronics.ViewModels;
 
@@ -19,7 +22,7 @@ public partial class MainViewModel : ViewModelBase
     private readonly VidenViewModel videnPage = new VidenViewModel();
     private readonly HardwareViewModel hardwarePage = new HardwareViewModel();
     private readonly ProductDetailPageViewModel productDetailPage = new ProductDetailPageViewModel();
-
+    
     public MainViewModel()
     {
         CurrentPage = homePage;

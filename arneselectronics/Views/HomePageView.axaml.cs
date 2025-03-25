@@ -6,13 +6,17 @@ using Npgsql;
 using System.Linq;
 using Avalonia.Interactivity;
 using System;
+using System.Collections.Generic;
 using arneselectronics.ViewModels;
+using Avalonia.Input;
+using arneselectronics;
 
 namespace arneselectronics.Views;
 
 public partial class HomePageView : UserControl
 {
     MainViewModel ViewModel;
+
     public HomePageView()
     {
         InitializeComponent();
@@ -30,9 +34,6 @@ public partial class HomePageView : UserControl
         {
             // Du kan nu bruge produktet, f.eks. ved at oprette PDP
             Console.WriteLine($"Produktnavn: {product.Name}");
-                
-            // Opret PDP-siden og send produktet som parameter (hvis du har en PDPView)
-            var pdpView = new ProductDetailPageView(product); // Passere produktet til ViewModel
             
         }
     }

@@ -15,28 +15,34 @@ namespace arneselectronics
         public string? FilePath { get; set; }
         public string? Type { get; set; }
         public string? Manufacturer { get; set; }
-        
+
         public Bitmap? ProductImage
         {
             get
             {
                 try
                 {
-                    var uri = new Uri(FilePath);
-                    using var stream = AssetLoader.Open(uri);
-                    return new Bitmap(stream);
+                    if (!string.IsNullOrEmpty(FilePath))
+                    {
+                        var uri = new Uri(FilePath);
+                        using var stream = AssetLoader.Open(uri);
+                        return new Bitmap(stream);
+                    }
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Kunne ikke loade billede: {FilePath} - {ex.Message}");
-                    var uri = new Uri("avares://arneselectronics/Assets/fallback.jpg");
-                    using var stream = AssetLoader.Open(uri);
-                    return new Bitmap(stream);
+                    Console.WriteLine($"Could not load image: {FilePath} - {ex.Message}");
                 }
-            } 
+
+                // Fallback-billede, hvis der opstår en fejl
+                var fallbackUri = new Uri("avares://arneselectronics/Assets/fallback.jpg");
+                using var fallbackStream = AssetLoader.Open(fallbackUri);
+                return new Bitmap(fallbackStream);
+            }
         }
 
-        public Products(string id, string name, string? manufacturer, string eanNumber, double price, string? type, string? filePath, string description)
+        public Products(string id, string name, string? manufacturer, string eanNumber, 
+                        double price, string? type, string? filePath, string description)
         {
             ID = id;
             Name = name;
@@ -47,22 +53,15 @@ namespace arneselectronics
             FilePath = filePath;
             DescriptionPath = description;
         }
-        // Empty constructor for creating products from database
-        public Products()
-        {
-            
-        }
 
-        public string Display(string display)
+        // Tom constructor til database-oprettelse af produkter
+        public Products() { }
+
+        public string Display(string displayMode)
         {
-            if (display == "FrontPage")
-            {
-                return $"{Name}\n {Price}";
-            }
-            else
-            {
-                return $"{Name} \t {Price} \n {DescriptionPath} \n {EAN_Number} \n {ID}";
-            }
+            return displayMode == "FrontPage"
+                ? $"{Name}\n{Price:C}"
+                : $"{Name}\t{Price:C}\n{DescriptionPath}\nEAN: {EAN_Number}\nID: {ID}";
         }
     }
 }
