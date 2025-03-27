@@ -20,6 +20,8 @@ public partial class MainViewModel : ViewModelBase
     private readonly HardwareViewModel hardwarePage = new HardwareViewModel();
     private readonly CartViewModel cartPage = new CartViewModel();
     private readonly ProductDetailPageViewModel productDetailPage = new ProductDetailPageViewModel();
+    private readonly LogInViewModel logInPage = new LogInViewModel();
+    private readonly HelpViewModel helpPage = new HelpViewModel();
 
     public MainViewModel()
     {
@@ -45,7 +47,14 @@ public partial class MainViewModel : ViewModelBase
 
     [RelayCommand]
     private void GoToCart() => CurrentPage = cartPage;
+    
     [RelayCommand]
     private void GoToProductDetailPage() => CurrentPage = productDetailPage;
+    
+    [RelayCommand]
+    private void GoToLogIn() => CurrentPage = logInPage;
+    
+    [RelayCommand]
+    private void GoToHelp() => CurrentPage = helpPage;
    
 }

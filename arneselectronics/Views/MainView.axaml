@@ -1,7 +1,7 @@
 <Window
     Title="arneselectronics"
-    d:DesignHeight=""
-    d:DesignWidth=""
+    d:DesignHeight="1050"
+    d:DesignWidth="1400"
     mc:Ignorable=""
     x:Class="arneselectronics.MainView"
     x:DataType="vm:MainViewModel"
@@ -18,12 +18,17 @@
     <!--  This lets us see the preview of our program  -->
 
     <StackPanel>
-        <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="Auto, Auto">
+        <Grid
+            ColumnDefinitions="Auto,*,*,*,*,Auto"
+            RowDefinitions="Auto, Auto"
+            ShowGridLines="True">
+
             <!--  Add Image control for Logo  -->
             <Button
                 Background="Transparent"
                 Command="{Binding GoToHomeCommand}"
                 Grid.Column="0"
+                Grid.Row="0"
                 Height="200"
                 HorizontalAlignment="Left"
                 Margin="10"
@@ -35,11 +40,51 @@
                 </Button.Content>
             </Button>
 
+            <!--  Search button in the middel  -->
+            <TextBox
+                FontFeatures=""
+                FontSize="20"
+                Grid.Column="2"
+                Grid.Row="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Watermark="Search" />
+
+            <!--  Help button?  -->
+            <Button
+                Background="Transparent"
+                Command="{Binding GoToHelpCommand}"
+                Grid.Column="3"
+                Height="60"
+                HorizontalAlignment="Right"
+                Width="50">
+                <Button.Content>
+                    <StackPanel>
+                        <Image Source="avares://arneselectronics/Assets/helpbutton.jpg" />
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+
+            <!--  Login button  -->
+            <Button
+                Background="Transparent"
+                Command="{Binding GoToLogInCommand}"
+                Grid.Column="4"
+                Height="60"
+                HorizontalAlignment="Right"
+                Width="50">
+                <Button.Content>
+                    <StackPanel>
+                        <Image Source="avares://arneselectronics/Assets/loginbillede.jpg" />
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+
             <!--  Cart logo on the right  -->
             <Button
                 Background="Transparent"
                 Command="{Binding GoToCartCommand}"
-                Grid.Column="1"
+                Grid.Column="5"
                 Height="60"
                 HorizontalAlignment="Right"
                 Width="50">
@@ -49,7 +94,8 @@
                     </StackPanel>
                 </Button.Content>
             </Button>
-        </Grid> 
+        </Grid>
+
         <!--  TextBlock for the total in the middle column  -->
         <StackPanel
             Grid.Column="2"
@@ -66,7 +112,7 @@
                 Name="Quantity"
                 Text="Antal varer:" />
         </StackPanel>
-        
+
         <Grid ColumnDefinitions="*,*,*,*,*,*">
             <Button Command="{Binding GoToHardwareCommand}" Grid.Column="1">Hardware</Button>
             <Button Command="{Binding GoToDesktopCommand}" Grid.Column="2">Desktop</Button>
