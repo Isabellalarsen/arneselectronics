@@ -33,7 +33,7 @@
                 Width="200">
                 <Button.Content>
                     <StackPanel>
-                        <Image Source="avares://arneselectronics/Assets/testbillede1.jpg" />
+                        <Image Source="avares://arneselectronics/Assets/arneslogo.png" />
                     </StackPanel>
                 </Button.Content>
             </Button>
