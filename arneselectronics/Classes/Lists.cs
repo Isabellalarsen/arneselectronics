@@ -22,7 +22,8 @@ public class ListInitializer
     public ObservableCollection<Products> HardwareList { get; } = new();
     public ObservableCollection<Products> AccessoriesList { get; } = new();
     
-// wow Singleton nice job :) 
+    public ObservableCollection<Products> CartList { get; } = new();
+    
     private ListInitializer() { }
     public void LoadProductsFromDatabase()
     {
