@@ -33,13 +33,16 @@
                 Width="200">
                 <Button.Content>
                     <StackPanel Margin="10">
-                        <Image Source="avares://arneselectronics/Assets/testbillede1.jpg" />
+                        <Image Source="avares://arneselectronics/Assets/logoimage.png" />
                     </StackPanel>
                 </Button.Content>
             </Button>
 
             <!--  Search button  -->
             <TextBox
+                BorderThickness="2"
+                FontSize="30"
+                FontWeight="DemiBold"
                 Grid.Column="1"
                 Grid.Row="0"
                 HorizontalAlignment="Center"
