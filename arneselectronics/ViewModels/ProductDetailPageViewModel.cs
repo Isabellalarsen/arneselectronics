@@ -1,18 +1,22 @@
+using System.Reactive.Linq;
 using Avalonia.Controls;
 using arneselectronics;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 
 namespace arneselectronics.ViewModels;
 
-public class ProductDetailPageViewModel : ViewModelBase
+public partial class ProductDetailPageViewModel : ViewModelBase
 {
-    public Products Product { get; set; }
-     
+    [ObservableProperty]
+    private Products _currentProduct;
 
     public ProductDetailPageViewModel()
     {
-        Product = new Products(
-            "12345", "SuperSmartphone X1", "SuperTech", "9876543210987", 799.99, "Smartphone", "avares://arneselectronics/Assets/980SDD.jpg", "En topmoderne smartphone med fantastisk kamera og høj ydeevne."
-        );
+    }
+
+    public void UpdateProduct(Products product)
+    {
+        _currentProduct = product;
     }
 }

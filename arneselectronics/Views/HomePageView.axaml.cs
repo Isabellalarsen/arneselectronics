@@ -21,6 +21,7 @@ public partial class HomePageView : UserControl
     {
         InitializeComponent();
         ListInitializer listInstance = ListInitializer.Instance;
+        this.DataContext = new MainViewModel();
         ProductsListView.ItemsSource = listInstance.ProductsList;
     }
 
@@ -36,5 +37,7 @@ public partial class HomePageView : UserControl
             Console.WriteLine($"Produktnavn: {product.Name}");
             
         }
+        
+        
     }
 }

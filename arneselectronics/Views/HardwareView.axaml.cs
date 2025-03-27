@@ -1,5 +1,6 @@
 using Avalonia;
 using Avalonia.Controls;
+using arneselectronics.ViewModels;
 using Avalonia.Markup.Xaml;
 using Dapper;
 using Npgsql;

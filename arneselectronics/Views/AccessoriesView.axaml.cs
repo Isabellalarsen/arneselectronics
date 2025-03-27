@@ -5,6 +5,9 @@ using Dapper;
 using Npgsql;
 using System.Linq;
 using arneselectronics;
+using arneselectronics.ViewModels;
+using Avalonia.Interactivity;
+using System;
 
 namespace arneselectronics.Views;
 
@@ -13,7 +16,7 @@ public partial class AccessoriesView : UserControl
     public AccessoriesView()
     {
         InitializeComponent();
-        ListInitializer listInstance = ListInitializer.Instance;
-        AccessoriesListView.ItemsSource = listInstance.AccessoriesList;
+        this.DataContext = new AccessoriesViewModel(new MainViewModel());
+        Console.WriteLine($"DataContext {DataContext.GetType()}");
     }
 }

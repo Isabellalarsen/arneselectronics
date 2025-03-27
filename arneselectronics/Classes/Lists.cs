@@ -23,7 +23,10 @@ public class ListInitializer
     public ObservableCollection<Products> AccessoriesList { get; } = new();
     
 // wow Singleton nice job :) 
-    private ListInitializer() { }
+    private ListInitializer()
+    {
+        LoadProductsFromDatabase();
+    }
     public void LoadProductsFromDatabase()
     {
         Credentials credentials = new();
