@@ -22,6 +22,7 @@ public partial class HomePageView : UserControl
         InitializeComponent();
         ListInitializer listInstance = ListInitializer.Instance;
         ProductsListView.ItemsSource = listInstance.ProductsList;
+        this.DataContext = new HomePageViewModel();
     }
 
     private void Button_OnClick(object? sender, Avalonia.Interactivity.RoutedEventArgs e)

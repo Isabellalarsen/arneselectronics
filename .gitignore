@@ -9,3 +9,4 @@ Credentials/
 *.pnb
 *.log
 .env
+.fake
