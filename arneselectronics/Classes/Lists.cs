@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System.Linq;
 using arneselectronics.Crendentials;
+using arneselectronics;
 using Avalonia.Collections;
 using Dapper;
 using Npgsql;
