@@ -17,7 +17,7 @@ public partial class MainViewModel : ViewModelBase
     private ViewModelBase currentPage;
 
     private readonly HomePageViewModel homePage;
-    private readonly LaptopViewModel _laptopPage;
+    private readonly LaptopViewModel laptopPage;
     private readonly AccessoriesViewModel accessoriesPage;
     private readonly DesktopViewModel desktopPage;
     private readonly ResourcesViewModel resourcePage;
@@ -30,14 +30,18 @@ public partial class MainViewModel : ViewModelBase
 
     public MainViewModel()
     {
+        homePage = new HomePageViewModel(this);
         currentPage = homePage;
         accessoriesPage = new AccessoriesViewModel(this);
+        desktopPage = new DesktopViewModel(this);
+        hardwarePage = new HardwareViewModel(this);
+        laptopPage = new LaptopViewModel(this);
     }
     [RelayCommand]
     private void GoToHome() =>  CurrentPage = homePage;
 
     [RelayCommand]
-    private void GoToLaptop() =>  CurrentPage = _laptopPage;
+    private void GoToLaptop() =>  CurrentPage = laptopPage;
 
     [RelayCommand]
     private void GoToAccessories() => CurrentPage = accessoriesPage;
