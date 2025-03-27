@@ -9,6 +9,5 @@ public partial class ResourcesView : UserControl
     public ResourcesView()
     {
         InitializeComponent();
-        ListInitializer listInstance = ListInitializer.Instance;
     } 
-    }
+}

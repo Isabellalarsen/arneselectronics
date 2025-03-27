@@ -25,11 +25,7 @@
                                 <Image Source="{Binding ProductImage}" Width="100" Height="100"/>
                                 <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
                                 <TextBlock Text="{Binding Price}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
-                                <Button Command="{Binding TestCommand}"
-                                        Content="Test Button"/>
-
-
-
+                                <Button Click="Button_OnClick" Content="Test Button"/>
                             </StackPanel>
                         </Border>
                     </DataTemplate>

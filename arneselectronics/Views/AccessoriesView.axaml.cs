@@ -13,10 +13,31 @@ namespace arneselectronics.Views;
 
 public partial class AccessoriesView : UserControl
 {
+    public AccessoriesViewModel ViewModel => this.DataContext as AccessoriesViewModel;
+
     public AccessoriesView()
     {
         InitializeComponent();
         this.DataContext = new AccessoriesViewModel(new MainViewModel());
-        Console.WriteLine($"DataContext {DataContext.GetType()}");
     }
+
+    private void Button_OnClick(object? sender, RoutedEventArgs e)
+    {
+        if (ViewModel != null)
+        {
+            // Sørg for at produktet er korrekt bundet og tilgængeligt
+            var product = (sender as Button)?.DataContext as Products;
+            if (product != null)
+            {
+                ViewModel.GoToProductDetailPageCommand.Execute(product);  // Kald kommandoen med produktet
+            }
+        }
+        else
+        {
+            // Fejlmeddelelse, hvis ViewModel er null
+            Console.WriteLine("ViewModel is null");
+        }
+    }
+
+
 }

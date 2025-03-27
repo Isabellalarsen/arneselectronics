@@ -16,16 +16,14 @@ public partial class MainViewModel : ViewModelBase
     [ObservableProperty]
     private ViewModelBase currentPage;
 
-    private readonly HomePageViewModel homePage = new HomePageViewModel();
-    private readonly LaptopViewModel _laptopPage = new LaptopViewModel();
+    private readonly HomePageViewModel homePage;
+    private readonly LaptopViewModel _laptopPage;
     private readonly AccessoriesViewModel accessoriesPage;
-    private readonly DesktopViewModel desktopPage = new DesktopViewModel();
-    private readonly ResourcesViewModel resourcePage = new ResourcesViewModel();
-    private readonly HardwareViewModel hardwarePage = new HardwareViewModel();
+    private readonly DesktopViewModel desktopPage;
+    private readonly ResourcesViewModel resourcePage;
+    private readonly HardwareViewModel hardwarePage;
     private readonly CartViewModel cartPage = new CartViewModel();
     private readonly ProductDetailPageViewModel productDetailPage = new ProductDetailPageViewModel();
-    public ObservableCollection<Products> AccessoriesList => ListInitializer.Instance.AccessoriesList;
-    public Products Products { get; set; }
     
     private static MainViewModel _instance;
     public static MainViewModel Instance => _instance ??= new MainViewModel();

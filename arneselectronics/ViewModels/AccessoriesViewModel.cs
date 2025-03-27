@@ -11,19 +11,18 @@ namespace arneselectronics.ViewModels
         
         public ObservableCollection<Products> AccessoriesList => ListInitializer.Instance.AccessoriesList;
         
-        public IRelayCommand GoToProductDetailPageCommand { get; }
-
-        public IRelayCommand TestCommand { get; }
+        public IRelayCommand<Products> GoToProductDetailPageCommand { get; }
 
         public AccessoriesViewModel(MainViewModel mainVm)
         {
             _mainVm = mainVm;
-            TestCommand = new RelayCommand(() =>
+            GoToProductDetailPageCommand = new RelayCommand<Products>(product =>
             {
-                Console.WriteLine("Test button clicked!");
+                if (product != null)
+                {
+                    _mainVm.GoToProductDetailPage(product); // Gå til produktdetaljesiden med produktet
+                }
             });
         }
-
-
     }
 }
