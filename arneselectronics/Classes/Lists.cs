@@ -3,7 +3,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System.Linq;
-using arneselectronics.Crendentials;
+using arneselectronics.Credentials;
 using arneselectronics;
 using Avalonia.Collections;
 using Dapper;
@@ -26,7 +26,7 @@ public class ListInitializer
     private ListInitializer() { }
     public void LoadProductsFromDatabase()
     {
-        Credentials credentials = new();
+        Credentials.Credentials credentials = new();
         string conString = credentials.Database;
 
         using (var con = new NpgsqlConnection(conString))
