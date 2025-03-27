@@ -5,10 +5,8 @@
              x:DataType="vm:ProductDetailPageViewModel">
   
     <StackPanel>
-        <TextBlock Text="{Binding Product.Name, FallbackValue='Produktnavn ikke fundet'}"/>
-        <TextBlock Text="{Binding Product.Price}"></TextBlock>
-        <Image Source="{Binding Product.ProductImage}"></Image>
-        
+        <TextBlock Text="{Binding CurrentProduct.Name, FallbackValue='Produktnavn ikke fundet'}"/>
+        <TextBlock Text="{Binding CurrentProduct.Price}"></TextBlock>
+        <Image Source="{Binding CurrentProduct.ProductImage}"></Image>
     </StackPanel>
-
 </UserControl>

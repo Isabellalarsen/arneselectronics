@@ -3,35 +3,34 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:arneselectronics"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="arneselectronics.Views.HomePageView">
-    
+             mc:Ignorable="d" 
+             d:DesignWidth="800" 
+             d:DesignHeight="450"
+             x:Class="arneselectronics.Views.HomePageView"
+             xmlns:vm="clr-namespace:arneselectronics.ViewModels"
+             x:DataType="vm:HomePageViewModel">
     
     <StackPanel>
         <ScrollViewer>
-            <ItemsControl Name="ProductsListView" >
+            <ItemsControl ItemsSource="{Binding ProductsList}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <UniformGrid Columns="4"/>
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
-                    <DataTemplate x:DataType="local:Products">
-                        <!-- Display each product in a Border -->
+                    <DataTemplate>
                         <Border Padding="5" BorderBrush="Gray" BorderThickness="1">
-                            <Button CommandParameter="{Binding   }" Click="Button_OnClick">
-                                <StackPanel>
-                                    <Image Source="{Binding ProductImage}" Width="100" Height="100"/>
-                                    <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
-                                    <TextBlock Text="{Binding Price}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
-                                </StackPanel>
-                            </Button>
+                            <StackPanel>
+                                <Image Source="{Binding ProductImage}" Width="100" Height="100"/>
+                                <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
+                                <TextBlock Text="{Binding Price}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
+                                <Button Click="Button_OnClick" Content="Test Button"/>
+                            </StackPanel>
                         </Border>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </ScrollViewer>
-        <TextBlock> Welcome to Arne's Electronics</TextBlock>
     </StackPanel>
 </UserControl>
-

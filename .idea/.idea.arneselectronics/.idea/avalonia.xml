@@ -18,6 +18,7 @@
         <entry key="arneselectronics/Views/LogInView.axaml" value="arneselectronics/arneselectronics.csproj" />
         <entry key="arneselectronics/Views/MainView.axaml" value="arneselectronics/arneselectronics.csproj" />
         <entry key="arneselectronics/Views/ProductDetailPageView.axaml" value="arneselectronics/arneselectronics.csproj" />
+        <entry key="arneselectronics/Views/ResourcesView.axaml" value="arneselectronics/arneselectronics.csproj" />
         <entry key="arneselectronics/Views/StationærView.axaml" value="arneselectronics/arneselectronics.csproj" />
         <entry key="arneselectronics/Views/TilbehørView.axaml" value="arneselectronics/arneselectronics.csproj" />
         <entry key="arneselectronics/Views/VidenView.axaml" value="arneselectronics/arneselectronics.csproj" />
