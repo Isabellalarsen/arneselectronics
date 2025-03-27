@@ -18,11 +18,19 @@
 
     <StackPanel>
         <Grid
+
+            ColumnDefinitions="Auto,*,*,*,*,Auto"
+            RowDefinitions="Auto, Auto"
+            ShowGridLines="True">
+
+            <!--  Add Image control for Logo  -->
+
             ColumnDefinitions="Auto,*,Auto"
             RowDefinitions="Auto, Auto"
             ShowGridLines="True">
 
             <!--  Homepage logo and button  -->
+
             <Button
                 Background="Transparent"
                 Command="{Binding GoToHomeCommand}"
@@ -30,11 +38,60 @@
                 Grid.Row="0"
                 Height="200"
                 HorizontalAlignment="Left"
+
+                Margin="10"
+                Width="200">
+                <Button.Content>
+                    <StackPanel>
+                        <Image Source="avares://arneselectronics/Assets/testbillede1.jpg" />
+
                 VerticalAlignment="Center"
                 Width="200">
                 <Button.Content>
                     <StackPanel Margin="10">
                         <Image Source="avares://arneselectronics/Assets/logoimage.png" />
+
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+
+
+            <!--  Search button in the middel  -->
+            <TextBox
+                FontFeatures=""
+                FontSize="20"
+                Grid.Column="2"
+                Grid.Row="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Watermark="Search" />
+
+            <!--  Help button?  -->
+            <Button
+                Background="Transparent"
+                Command="{Binding GoToHelpCommand}"
+                Grid.Column="3"
+                Height="60"
+                HorizontalAlignment="Right"
+                Width="50">
+                <Button.Content>
+                    <StackPanel>
+                        <Image Source="avares://arneselectronics/Assets/helpbutton.jpg" />
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+
+            <!--  Login button  -->
+            <Button
+                Background="Transparent"
+                Command="{Binding GoToLogInCommand}"
+                Grid.Column="4"
+                Height="60"
+                HorizontalAlignment="Right"
+                Width="50">
+                <Button.Content>
+                    <StackPanel>
+                        <Image Source="avares://arneselectronics/Assets/loginbillede.jpg" />
                     </StackPanel>
                 </Button.Content>
             </Button>
@@ -50,13 +107,18 @@
                 VerticalAlignment="Center"
                 Watermark="Search..." />
 
+
             <!--  Cart logo on the right  -->
             <Button
                 Background="Transparent"
-                Command="{Binding GoToCartCommand}"
+
+                Grid.Column="5"
+                Height="60"
+
                 Grid.Column="2"
                 Grid.Row="0"
                 Height="100"
+
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
                 Width="80">
@@ -96,6 +158,14 @@
         </Grid>
 
 
+
+        <Grid ColumnDefinitions="*,*,*,*,*,*">
+            <Button Command="{Binding GoToHardwareCommand}" Grid.Column="1">Hardware</Button>
+            <Button Command="{Binding GoToDesktopCommand}" Grid.Column="2">Desktop</Button>
+            <Button Command="{Binding GoToAccessoriesCommand}" Grid.Column="3">Accessories</Button>
+            <Button Command="{Binding GoToResourceCommand}" Grid.Column="4">Resource</Button>
+            <Button Command="{Binding GoToLaptopCommand}" Grid.Column="5">Laptop</Button>
+        </Grid>
 
         <ContentControl Content="{Binding CurrentPage}" />
     </StackPanel>
