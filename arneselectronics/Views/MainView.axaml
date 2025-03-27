@@ -18,23 +18,22 @@
     <!--  This lets us see the preview of our program  -->
 
     <StackPanel>
-        <Grid ColumnDefinitions="*,*,*,*,*,*">
-            <Button Command="{Binding GoToHomeCommand}" Grid.Column="0">Homepage</Button>
-            <Button Command="{Binding GoToHardwareCommand}" Grid.Column="1">Hardware</Button>
-            <Button Command="{Binding GoToDesktopCommand}" Grid.Column="2">Desktop</Button>
-            <Button Command="{Binding GoToAccessoriesCommand}" Grid.Column="3">Accessories</Button>
-            <Button Command="{Binding GoToResourceCommand}" Grid.Column="4">Resource</Button>
-            <Button Command="{Binding GoToLaptopCommand}" Grid.Column="5">Laptop</Button>
-        </Grid>
-        <Grid ColumnDefinitions="*,*,Auto" RowDefinitions="Auto, Auto">
+        <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="Auto, Auto">
             <!--  Add Image control for Logo  -->
-            <Image
+            <Button
+                Background="Transparent"
+                Command="{Binding GoToHomeCommand}"
                 Grid.Column="0"
-                Height="100"
+                Height="200"
                 HorizontalAlignment="Left"
                 Margin="10"
-                Width="200"
-                x:Name="LogoImage" />
+                Width="200">
+                <Button.Content>
+                    <StackPanel>
+                        <Image Source="avares://arneselectronics/Assets/testbillede1.jpg" />
+                    </StackPanel>
+                </Button.Content>
+            </Button>
 
             <!--  Cart logo on the right  -->
             <Button
@@ -50,8 +49,7 @@
                     </StackPanel>
                 </Button.Content>
             </Button>
-        </Grid>
-
+        </Grid> 
         <!--  TextBlock for the total in the middle column  -->
         <StackPanel
             Grid.Column="2"
@@ -68,6 +66,14 @@
                 Name="Quantity"
                 Text="Antal varer:" />
         </StackPanel>
+        
+        <Grid ColumnDefinitions="*,*,*,*,*,*">
+            <Button Command="{Binding GoToHardwareCommand}" Grid.Column="1">Hardware</Button>
+            <Button Command="{Binding GoToDesktopCommand}" Grid.Column="2">Desktop</Button>
+            <Button Command="{Binding GoToAccessoriesCommand}" Grid.Column="3">Accessories</Button>
+            <Button Command="{Binding GoToResourceCommand}" Grid.Column="4">Resource</Button>
+            <Button Command="{Binding GoToLaptopCommand}" Grid.Column="5">Laptop</Button>
+        </Grid>
 
         <ContentControl Content="{Binding CurrentPage}" />
     </StackPanel>
