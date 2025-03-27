@@ -12,8 +12,10 @@
         <entry key="arneselectronics/Views/CartView.axaml" value="arneselectronics/arneselectronics.csproj" />
         <entry key="arneselectronics/Views/DesktopView.axaml" value="arneselectronics/arneselectronics.csproj" />
         <entry key="arneselectronics/Views/HardwareView.axaml" value="arneselectronics/arneselectronics.csproj" />
+        <entry key="arneselectronics/Views/HelpView.axaml" value="arneselectronics/arneselectronics.csproj" />
         <entry key="arneselectronics/Views/HomePageView.axaml" value="arneselectronics/arneselectronics.csproj" />
         <entry key="arneselectronics/Views/LaptopView.axaml" value="arneselectronics/arneselectronics.csproj" />
+        <entry key="arneselectronics/Views/LogInView.axaml" value="arneselectronics/arneselectronics.csproj" />
         <entry key="arneselectronics/Views/MainView.axaml" value="arneselectronics/arneselectronics.csproj" />
         <entry key="arneselectronics/Views/ProductDetailPageView.axaml" value="arneselectronics/arneselectronics.csproj" />
         <entry key="arneselectronics/Views/ResourcesView.axaml" value="arneselectronics/arneselectronics.csproj" />

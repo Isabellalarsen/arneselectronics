@@ -24,9 +24,16 @@ public partial class MainViewModel : ViewModelBase
     private readonly HardwareViewModel hardwarePage;
     private readonly CartViewModel cartPage = new CartViewModel();
     private readonly ProductDetailPageViewModel productDetailPage = new ProductDetailPageViewModel();
+
     
     private static MainViewModel _instance;
     public static MainViewModel Instance => _instance ??= new MainViewModel();
+
+   
+   
+ private readonly LogInViewModel logInPage = new LogInViewModel();
+ private readonly HelpViewModel helpPage = new HelpViewModel();
+
 
     public MainViewModel()
     {
@@ -65,6 +72,12 @@ public partial class MainViewModel : ViewModelBase
         CurrentPage = productDetailPage;
     }
     
+
+    [RelayCommand]
+    private void GoToLogIn() => CurrentPage = logInPage;
+    
+    [RelayCommand]
+    private void GoToHelp() => CurrentPage = helpPage;
 
    
 }

@@ -3,7 +3,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System.Linq;
-using arneselectronics.Crendentials;
+using arneselectronics.Credentials;
 using arneselectronics;
 using Avalonia.Collections;
 using Dapper;
@@ -21,15 +21,19 @@ public class ListInitializer
     public ObservableCollection<Products> LaptopList { get; } = new();
     public ObservableCollection<Products> HardwareList { get; } = new();
     public ObservableCollection<Products> AccessoriesList { get; } = new();
-    
+
 // wow Singleton nice job :) 
     private ListInitializer()
     {
         LoadProductsFromDatabase();
     }
+
+    public ObservableCollection<Products> CartList { get; } = new();
+    
+
     public void LoadProductsFromDatabase()
     {
-        Credentials credentials = new();
+        Credentials.Credentials credentials = new();
         string conString = credentials.Database;
 
         using (var con = new NpgsqlConnection(conString))
