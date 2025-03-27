@@ -30,6 +30,7 @@
                 Grid.Row="0"
                 Height="200"
                 HorizontalAlignment="Left"
+                VerticalAlignment="Center"
                 Width="200">
                 <Button.Content>
                     <StackPanel Margin="10">
