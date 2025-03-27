@@ -1,11 +1,6 @@
-using Avalonia.Controls;
-using System;
 using System.Collections.ObjectModel;
-using System.Collections.Generic;
 using System.Linq;
-using arneselectronics.Credentials;
-using arneselectronics;
-using Avalonia.Collections;
+using arneselectronics.Crendentials;
 using Dapper;
 using Npgsql;
 
@@ -27,7 +22,7 @@ public class ListInitializer
     private ListInitializer() { }
     public void LoadProductsFromDatabase()
     {
-        Credentials.Credentials credentials = new();
+        Credentials credentials = new();
         string conString = credentials.Database;
 
         using (var con = new NpgsqlConnection(conString))

@@ -1,5 +1,4 @@
 <Window
-    Icon=""
     Title="arneselectronics"
     d:DesignHeight="1050"
     d:DesignWidth="1400"
@@ -18,19 +17,11 @@
 
     <StackPanel>
         <Grid
-
             ColumnDefinitions="Auto,*,*,*,*,Auto"
             RowDefinitions="Auto, Auto"
             ShowGridLines="True">
 
             <!--  Add Image control for Logo  -->
-
-            ColumnDefinitions="Auto,*,Auto"
-            RowDefinitions="Auto, Auto"
-            ShowGridLines="True">
-
-            <!--  Homepage logo and button  -->
-
             <Button
                 Background="Transparent"
                 Command="{Binding GoToHomeCommand}"
@@ -38,23 +29,14 @@
                 Grid.Row="0"
                 Height="200"
                 HorizontalAlignment="Left"
-
                 Margin="10"
                 Width="200">
                 <Button.Content>
                     <StackPanel>
                         <Image Source="avares://arneselectronics/Assets/testbillede1.jpg" />
-
-                VerticalAlignment="Center"
-                Width="200">
-                <Button.Content>
-                    <StackPanel Margin="10">
-                        <Image Source="avares://arneselectronics/Assets/logoimage.png" />
-
                     </StackPanel>
                 </Button.Content>
             </Button>
-
 
             <!--  Search button in the middel  -->
             <TextBox
@@ -96,68 +78,38 @@
                 </Button.Content>
             </Button>
 
-            <!--  Search button  -->
-            <TextBox
-                BorderThickness="2"
-                FontSize="30"
-                FontWeight="DemiBold"
-                Grid.Column="1"
-                Grid.Row="0"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Watermark="Search..." />
-
-
             <!--  Cart logo on the right  -->
             <Button
                 Background="Transparent"
-
+                Command="{Binding GoToCartCommand}"
                 Grid.Column="5"
                 Height="60"
-
-                Grid.Column="2"
-                Grid.Row="0"
-                Height="100"
-
                 HorizontalAlignment="Right"
-                VerticalAlignment="Bottom"
-                Width="80">
+                Width="50">
                 <Button.Content>
                     <StackPanel>
                         <Image Source="avares://arneselectronics/Assets/carticon.jpg" />
                     </StackPanel>
                 </Button.Content>
             </Button>
-
-            <!--  TextBlock for the total in the middle column  -->
-            <StackPanel
-                Grid.Column="2"
-                Grid.Row="1"
-                HorizontalAlignment="Right"
-                Margin="10"
-                VerticalAlignment="Center">
-                <TextBlock
-                    FontSize="14"
-                    Height="15"
-                    Name="Total"
-                    Text="Total:" />
-                <TextBlock
-                    Height="15"
-                    Name="Quantity"
-                    Text="Antal varer:" />
-            </StackPanel>
         </Grid>
 
-        <Grid ColumnDefinitions="*,*,*,*,*,*">
-            <!-- <Button Command="{Binding GoToHomeCommand}" Grid.Column="0">Homepage</Button> -->
-            <Button Command="{Binding GoToHardwareCommand}" Grid.Column="1">Hardware</Button>
-            <Button Command="{Binding GoToDesktopCommand}" Grid.Column="2">Desktop</Button>
-            <Button Command="{Binding GoToAccessoriesCommand}" Grid.Column="3">Accessories</Button>
-            <Button Command="{Binding GoToResourceCommand}" Grid.Column="4">Resource</Button>
-            <Button Command="{Binding GoToLaptopCommand}" Grid.Column="5">Laptop</Button>
-        </Grid>
-
-
+        <!--  TextBlock for the total in the middle column  -->
+        <StackPanel
+            Grid.Column="2"
+            HorizontalAlignment="Right"
+            Margin="10"
+            VerticalAlignment="Center">
+            <TextBlock
+                FontSize="14"
+                Height="15"
+                Name="Total"
+                Text="Total:" />
+            <TextBlock
+                Height="15"
+                Name="Quantity"
+                Text="Antal varer:" />
+        </StackPanel>
 
         <Grid ColumnDefinitions="*,*,*,*,*,*">
             <Button Command="{Binding GoToHardwareCommand}" Grid.Column="1">Hardware</Button>
@@ -171,4 +123,3 @@
     </StackPanel>
 
 </Window>
-
