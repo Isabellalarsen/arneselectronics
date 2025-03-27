@@ -1,6 +1,3 @@
-using System.Reactive.Linq;
-using Avalonia.Controls;
-using arneselectronics;
 using CommunityToolkit.Mvvm.ComponentModel;
 
 
