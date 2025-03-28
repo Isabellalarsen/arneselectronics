@@ -28,8 +28,8 @@
                 Grid.Column="0"
                 Grid.Row="0"
                 Height="200"
-                HorizontalAlignment="Left"
-                Margin="10"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
                 Width="200">
                 <Button.Content>
                     <StackPanel>
@@ -112,11 +112,38 @@
         </StackPanel>
 
         <Grid ColumnDefinitions="*,*,*,*,*,*">
-            <Button Command="{Binding GoToHardwareCommand}" Grid.Column="1">Hardware</Button>
-            <Button Command="{Binding GoToDesktopCommand}" Grid.Column="2">Desktop</Button>
-            <Button Command="{Binding GoToAccessoriesCommand}" Grid.Column="3">Accessories</Button>
-            <Button Command="{Binding GoToResourceCommand}" Grid.Column="4">Resource</Button>
-            <Button Command="{Binding GoToLaptopCommand}" Grid.Column="5">Laptop</Button>
+            <Button
+                Command="{Binding GoToHardwareCommand}"
+                Grid.Column="1"
+                VerticalAlignment="Top">
+                Hardware
+            </Button>
+            <Button
+                Command="{Binding GoToDesktopCommand}"
+                Grid.Column="2"
+                VerticalAlignment="Top">
+                Desktop
+            </Button>
+            <Button
+                Command="{Binding GoToAccessoriesCommand}"
+                Grid.Column="3"
+                VerticalAlignment="Top">
+                Accessories
+            </Button>
+
+            <Button
+                Command="{Binding GoToLaptopCommand}"
+                Grid.Column="4"
+                VerticalAlignment="Top">
+                Laptop
+            </Button>
+
+            <Button
+                Command="{Binding GoToResourceCommand}"
+                Grid.Column="5"
+                VerticalAlignment="Top">
+                Resource
+            </Button>
         </Grid>
 
         <ContentControl Content="{Binding CurrentPage}" />
