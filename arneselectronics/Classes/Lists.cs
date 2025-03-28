@@ -1,10 +1,6 @@
-using Avalonia.Controls;
-using System;
 using System.Collections.ObjectModel;
-using System.Collections.Generic;
 using System.Linq;
 using arneselectronics.Crendentials;
-using Avalonia.Collections;
 using Dapper;
 using Npgsql;
 
@@ -20,9 +16,16 @@ public class ListInitializer
     public ObservableCollection<Products> LaptopList { get; } = new();
     public ObservableCollection<Products> HardwareList { get; } = new();
     public ObservableCollection<Products> AccessoriesList { get; } = new();
-    
+
 // wow Singleton nice job :) 
-    private ListInitializer() { }
+    private ListInitializer()
+    {
+        LoadProductsFromDatabase();
+    }
+
+    public ObservableCollection<Products> CartList { get; } = new();
+    
+
     public void LoadProductsFromDatabase()
     {
         Credentials credentials = new();

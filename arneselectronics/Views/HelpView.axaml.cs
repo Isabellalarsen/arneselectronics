@@ -4,10 +4,10 @@ using Avalonia.Markup.Xaml;
 
 namespace arneselectronics.Views;
 
-public partial class ResourcesView : UserControl
+public partial class HelpView : UserControl
 {
-    public ResourcesView()
+    public HelpView()
     {
         InitializeComponent();
-    } 
+    }
 }
