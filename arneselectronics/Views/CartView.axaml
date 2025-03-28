@@ -3,18 +3,43 @@
     d:DesignWidth="800"
     mc:Ignorable="d"
     x:Class="arneselectronics.Views.CartView"
+    x:DataType="viewModels:CartViewModel"
     xmlns="https://github.com/avaloniaui"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:arneselectronics"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:arneselectronics.ViewModels"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <StackPanel>
-        <Grid>
-            <Label Margin="50">Cart</Label>
+    <StackPanel Spacing="10">
+        <Grid ColumnDefinitions="*,* " RowDefinitions="*, *, *, *, *">
+            <!--  Heading  -->
+            <TextBlock
+                FontSize="24"
+                FontWeight="Bold"
+                Grid.Column="0"
+                Grid.Row="0"
+                HorizontalAlignment="Left"
+                Margin="20"
+                Text="Cart" />
+
+            <!--  Buy more  -->
+            <Button
+                Background="Transparent"
+                Command="{Binding GoToHomeCommand}"
+                Content="Buy more"
+                Grid.Column="3"
+                Grid.Row="0" />
+
+            <!--  Subtitle  -->
+            <TextBlock
+                FontSize="20"
+                FontWeight="Normal"
+                Grid.Column="0"
+                Grid.Row="1"
+                HorizontalAlignment="Left"
+                Margin="20"
+                Text="Your cart contains" />
         </Grid>
-
-        <Grid ColumnDefinitions="*,*,*,*" />
-
     </StackPanel>
 </UserControl>
