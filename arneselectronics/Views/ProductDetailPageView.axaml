@@ -1,4 +1,5 @@
 <UserControl
+    Background="PapayaWhip"
     x:Class="arneselectronics.Views.ProductDetailPageView"
     x:DataType="vm:ProductDetailPageViewModel"
     xmlns="https://github.com/avaloniaui"
@@ -6,6 +7,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <StackPanel>
+
         <Grid
             ColumnDefinitions="Auto,*,*"
             RowDefinitions="*,*,*"
@@ -13,14 +15,15 @@
             <Image
                 Grid.Column="0"
                 Grid.Row="0"
-                Height="200"
+                Height="300"
                 Source="{Binding CurrentProduct.ProductImage}"
-                Width="150" />
+                Width="225" />
             <TextBlock
-                FontSize="25"
+                FontSize="30"
                 FontWeight="Medium"
                 Grid.Column="1"
                 Grid.Row="0"
+                HorizontalAlignment="Center"
                 Text="{Binding CurrentProduct.Name, FallbackValue='Produktnavn ikke fundet'}"
                 VerticalAlignment="Top" />
             <TextBlock
