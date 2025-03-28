@@ -22,7 +22,7 @@ public partial class MainViewModel : ViewModelBase
     private readonly DesktopViewModel desktopPage;
     private readonly ResourcesViewModel resourcePage;
     private readonly HardwareViewModel hardwarePage;
-    private readonly CartViewModel cartPage = new CartViewModel();
+    private readonly CartViewModel cartPage;
     private readonly ProductDetailPageViewModel productDetailPage = new ProductDetailPageViewModel();
 
     
@@ -43,9 +43,10 @@ public partial class MainViewModel : ViewModelBase
         desktopPage = new DesktopViewModel(this);
         hardwarePage = new HardwareViewModel(this);
         laptopPage = new LaptopViewModel(this);
+        cartPage = new CartViewModel(this);
     }
     [RelayCommand]
-    private void GoToHome() =>  CurrentPage = homePage;
+    public void GoToHome() =>  CurrentPage = homePage;
 
     [RelayCommand]
     private void GoToLaptop() =>  CurrentPage = laptopPage;
