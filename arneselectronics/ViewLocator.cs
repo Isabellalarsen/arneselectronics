@@ -3,7 +3,6 @@ using arneselectronics.ViewModels;
 using arneselectronics.Views;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-
 namespace arneselectronics;
 
 public class ViewLocator : IDataTemplate

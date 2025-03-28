@@ -3,8 +3,22 @@
 
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ACastHelpers_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F3c92637ae2e83da0a63791071c41eae291d594156062866d8621b7ed7245c_003FCastHelpers_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 
-	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestProjectMapping/=284F4FDF_002D3434_002D4B13_002DA2C8_002DFFDBB1A2D0BB/@EntryIndexedValue">arneselectronics.Tests</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestProjectMapping/=284F4FDF_002D3434_002D4B13_002DA2C8_002DFFDBB1A2D0BB/@EntryIndexedValue">A4BA69A2-8CBE-4176-AF75-383EC8E5FB33</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestTemplateMapping/=NUnit3x/@EntryIndexedValue">db4927dd-2e12-48a7-9a84-2b7e3e31b9c8</s:String>
+
+	
+	
+	
+	
+	
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cd3e278f_002Df9db_002D4fa1_002D92de_002D3faa71b067ec/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;arneselectronics.Tests&amp;gt; #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::A4BA69A2-8CBE-4176-AF75-383EC8E5FB33::net9.0::arneselectronics.Tests.Classes.ProductsTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	</wpf:ResourceDictionary>
+
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=05fe5a78_002De025_002D42e8_002Db840_002Da8fe62f8c40d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;arneselectronics.Tests&amp;gt; #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Project Location="C:\Users\nikla\RiderProjects\arneselectronics\arneselectronics.Tests" Presentation="&amp;lt;arneselectronics.Tests&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
