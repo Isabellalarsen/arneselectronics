@@ -16,14 +16,15 @@ public class ListInitializer
     public ObservableCollection<Products> LaptopList { get; } = new();
     public ObservableCollection<Products> HardwareList { get; } = new();
     public ObservableCollection<Products> AccessoriesList { get; } = new();
+    
+    public ObservableCollection<Products> CartList { get; } = new();
 
 // wow Singleton nice job :) 
     private ListInitializer()
     {
         LoadProductsFromDatabase();
     }
-
-    public ObservableCollection<Products> CartList { get; } = new();
+    
     
 
     public void LoadProductsFromDatabase()
