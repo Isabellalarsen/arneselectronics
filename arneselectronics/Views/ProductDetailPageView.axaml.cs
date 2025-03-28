@@ -9,6 +9,7 @@ namespace arneselectronics.Views
         public ProductDetailPageView()
         {
             InitializeComponent();
+            
         }
     }
 }

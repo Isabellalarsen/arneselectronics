@@ -1,31 +1,49 @@
-<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:local="clr-namespace:arneselectronics"
-             mc:Ignorable="d" 
-             d:DesignWidth="800" 
-             d:DesignHeight="450"
-             x:Class="arneselectronics.Views.LaptopView"
-             xmlns:vm="clr-namespace:arneselectronics.ViewModels"
-             x:DataType="vm:LaptopViewModel">
-    
+<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="arneselectronics.Views.LaptopView"
+    x:DataType="vm:LaptopViewModel"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:arneselectronics"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:arneselectronics.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
     <StackPanel>
         <ScrollViewer>
             <ItemsControl ItemsSource="{Binding LaptopList}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <UniformGrid Columns="4"/>
+                        <UniformGrid Columns="4" />
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Border Padding="5" BorderBrush="Gray" BorderThickness="1">
+                        <Border
+                            BorderBrush="Gray"
+                            BorderThickness="1"
+                            Padding="5">
                             <StackPanel>
-                                <Image Source="{Binding ProductImage}" Width="100" Height="100"/>
-                                <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
-                                <TextBlock Text="{Binding Price}" FontSize="16" FontWeight="Bold" Foreground="Black"/>
-                                <Button Click="Button_OnClick" Content="Test Button"/>
+                                <Button Background="Transparent" Click="Button_OnClick">
+                                    <StackPanel>
+                                        <Image
+                                            Height="100"
+                                            Source="{Binding ProductImage}"
+                                            Width="100" />
+                                        <TextBlock
+                                            FontSize="16"
+                                            FontWeight="Bold"
+                                            Foreground="Black"
+                                            Text="{Binding Name}" />
+                                        <TextBlock
+                                            FontSize="16"
+                                            FontWeight="Bold"
+                                            Foreground="Black"
+                                            Text="{Binding Price}" />
+                                    </StackPanel>
+                                </Button>
                             </StackPanel>
                         </Border>
                     </DataTemplate>
