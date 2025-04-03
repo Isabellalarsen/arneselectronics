@@ -166,10 +166,10 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-        
         <Grid ColumnDefinitions="*" RowDefinitions="*,*">
             <TextBlock HorizontalAlignment="Right">
-                <Run Text="Total Amount             " />
+                <Run Text="Total Amount" />
+                <Run Text="{Binding TotalPrice, StringFormat='{}{0:F2} dkk.'}"></Run>
                 <LineBreak />
                 <Run
                     FontWeight="Light"
@@ -204,5 +204,7 @@
                 </Button.Template>
             </Button>
         </Grid>
+        
+        
     </StackPanel>
 </UserControl>
