@@ -15,11 +15,11 @@
     <Design.DataContext>
         <vm:MainViewModel />
     </Design.DataContext>
-
+<ScrollViewer>
     <StackPanel>
         <Grid
-            ColumnDefinitions="Auto,*,*,*,*,Auto"
-            RowDefinitions="Auto, Auto,Auto"
+            ColumnDefinitions="Auto,*,*,*,Auto"
+            RowDefinitions="Auto, Auto"
             ShowGridLines="True">
             <!--  Logo Button  -->
             <Button
@@ -36,37 +36,42 @@
             <!--  Search Box  -->
             <TextBox
                 FontSize="20"
+                Width="300"
+                CornerRadius="20"
                 Grid.Column="2"
                 Grid.Row="0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Watermark="Search" />
 
-            <!--  Help Button  -->
-            <Button
-                Background="Transparent"
-                Command="{Binding GoToHelpCommand}"
-                Grid.Column="3"
-                Height="60"
-                HorizontalAlignment="Right"
-                Width="50">
-                <Image Source="avares://arneselectronics/Assets/helpbutton.jpg" />
-            </Button>
+            <Grid Grid.Column="3" ColumnDefinitions="*,*" ShowGridLines="False">
+                <!--  Help Button  -->
+                <Button 
+                    Background="Transparent"
+                    Command="{Binding GoToHelpCommand}"
+                    Grid.Column="0"
+                    Height="60"
+                    HorizontalAlignment="Center"
+                    Width="50">
+                    <Image Source="avares://arneselectronics/Assets/helpbutton.jpg" />
+                </Button>
 
-            <!--  Login Button  -->
-            <Button
-                Background="Transparent"
-                Command="{Binding GoToLogInCommand}"
-                Grid.Column="4"
-                Height="60"
-                HorizontalAlignment="Right"
-                Width="50">
-                <Image Source="avares://arneselectronics/Assets/loginbillede.jpg" />
-            </Button>
+                <!--  Login Button  -->
+                <Button
+                    Background="Transparent"
+                    Command="{Binding GoToLogInCommand}"
+                    Grid.Column="1"
+                    Height="60"
+                    HorizontalAlignment="Center"
+                    Width="50">
+                    <Image Source="avares://arneselectronics/Assets/loginbillede.jpg" />
+                </Button>
+            </Grid>
+            
             <StackPanel
                 Grid.Column="5"
                 Grid.Row="0"
-                VerticalAlignment="Center">
+                VerticalAlignment="Center" Margin="10">
                 <!--  Cart Button  -->
                 <Button
                     Background="Transparent"
@@ -78,11 +83,10 @@
                 </Button>
 
                 <!--  Textblock for total amount and quantity  -->
-                <TextBlock Name="Quantity" Text="Total number of items" />
+                <TextBlock Name="Quantity" Text ="{Binding ProductCounter, StringFormat=' Total Items: {0}'}"/>
 
-                <TextBlock Name="Total" Text="Total" />
+                <TextBlock Name="Total" Text="{Binding Total, StringFormat='Total price: {0:0.00}'}" />
             </StackPanel>
-
         </Grid>
 
         <!--  Navigation Buttons  -->
@@ -122,4 +126,5 @@
         <!--  Page Content  -->
         <ContentControl Content="{Binding CurrentPage}" />
     </StackPanel>
+</ScrollViewer>
 </Window>

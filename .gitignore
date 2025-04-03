@@ -9,3 +9,11 @@ Credentials/
 *.pnb
 *.log
 .env
+arneselectronics.sln.DotSettings.user
+*.csproj.user
+*.sln.docstates
+*.pdb      # Debugging symbols
+*.user     # User-specific settings
+*.cache    # Cache files
+.idea/                      # JetBrains Rider IDE settings
+.vs/                        # Visual Studio settings

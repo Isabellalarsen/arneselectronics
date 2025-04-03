@@ -12,36 +12,11 @@
 	
 	
 	
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cd3e278f_002Df9db_002D4fa1_002D92de_002D3faa71b067ec/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;arneselectronics.Tests&amp;gt; #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;NUnit3x::A4BA69A2-8CBE-4176-AF75-383EC8E5FB33::net9.0::arneselectronics.Tests.Classes.ProductsTest&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cd3e278f_002Df9db_002D4fa1_002D92de_002D3faa71b067ec/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;arneselectronics.Tests&amp;gt; #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::A4BA69A2-8CBE-4176-AF75-383EC8E5FB33::net9.0::arneselectronics.Tests.Classes.ProductsTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	</wpf:ResourceDictionary>
 
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=05fe5a78_002De025_002D42e8_002Db840_002Da8fe62f8c40d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;arneselectronics.Tests&amp;gt; #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Project Location="C:\Users\nikla\RiderProjects\arneselectronics\arneselectronics.Tests" Presentation="&amp;lt;arneselectronics.Tests&amp;gt;" /&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=348a1597_002D124e_002D460a_002D8dd3_002Dbd1fde1b4dc6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestLoadProductsFromDatabase" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::A4BA69A2-8CBE-4176-AF75-383EC8E5FB33::net9.0::arneselectronics.Tests.Classes.ListsTest.TestLoadProductsFromDatabase&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=36215efa_002De8e7_002D402d_002Da929_002D3693eeb1e640/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from ListsTest.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;ProjectFile&gt;A4BA69A2-8CBE-4176-AF75-383EC8E5FB33/d:Classes/f:ListsTest.cs&lt;/ProjectFile&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=598a1a3b_002Dd7a8_002D4fc5_002D88c0_002Dc8ed3157a96e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from ListsTest.cs #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;ProjectFile&gt;A4BA69A2-8CBE-4176-AF75-383EC8E5FB33/d:Classes/f:ListsTest.cs&lt;/ProjectFile&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=76decf47_002D716d_002D4cc3_002D94a7_002Dc1068a38c90d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from ListsTest.cs #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;ProjectFile&gt;A4BA69A2-8CBE-4176-AF75-383EC8E5FB33/d:Classes/f:ListsTest.cs&lt;/ProjectFile&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a99b7310_002D9f35_002D47c1_002D9030_002Dccfa0c5a6ba6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;arneselectronics.Tests&amp;gt; #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Project Location="C:\Users\nikla\RiderProjects\arneselectronics\arneselectronics.Tests" Presentation="&amp;lt;arneselectronics.Tests&amp;gt;" /&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cd3e278f_002Df9db_002D4fa1_002D92de_002D3faa71b067ec/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;arneselectronics.Tests&amp;gt; #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Project Location="C:\Users\nikla\RiderProjects\arneselectronics\arneselectronics.Tests" Presentation="&amp;lt;arneselectronics.Tests&amp;gt;" /&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=eaa377fd_002D9434_002D4cbd_002Db1bb_002D7c3b278b41a6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;arneselectronics.Tests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Project Location="C:\Users\nikla\RiderProjects\arneselectronics\arneselectronics.Tests" Presentation="&amp;lt;arneselectronics.Tests&amp;gt;" /&gt;&#xD;
-&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
+	
