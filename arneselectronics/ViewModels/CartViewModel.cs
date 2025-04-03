@@ -9,7 +9,6 @@ namespace arneselectronics.ViewModels
 public partial class CartViewModel : ViewModelBase
 {
     private readonly MainViewModel _mainVm;
-    
     public IRelayCommand GoToHomeCommand { get; }
 
     public CartViewModel(MainViewModel mainVm)

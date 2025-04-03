@@ -12,8 +12,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <StackPanel Spacing="10">
-        <Grid ColumnDefinitions="*,* " RowDefinitions="*, *, *, *, *">
-            <!--  Heading  -->
+        <!--  Heading  -->
+        <Grid ColumnDefinitions="*,*" RowDefinitions="*">
             <TextBlock
                 FontSize="24"
                 FontWeight="Bold"
@@ -28,18 +28,31 @@
                 Background="Transparent"
                 Command="{Binding GoToHomeCommand}"
                 Content="Buy more"
-                Grid.Column="3"
-                Grid.Row="0" />
+                Grid.Column="1"
+                Grid.Row="0"
+                HorizontalAlignment="Right" />
+        </Grid>
 
-            <!--  Subtitle  -->
-            <TextBlock
-                FontSize="20"
-                FontWeight="Normal"
+        <Grid ColumnDefinitions="*,*,*,*,*" RowDefinitions="*,*">
+            <!--  Product image  -->
+            <!--  Remember to Bind the picture. It is mockup only!  -->
+            <Image
                 Grid.Column="0"
-                Grid.Row="1"
+                Grid.Row="0"
+                Height="100"
                 HorizontalAlignment="Left"
                 Margin="20"
-                Text="Your cart contains" />
+                Source="avares://arneselectronics/Assets/iPadAir.jpg"
+                Width="100" />
+
+            <!--  Product name - remember to binding  -->
+            <TextBlock
+                FontSize="24"
+                Grid.Column="1"
+                Grid.Row="0"
+                HorizontalAlignment="Left"
+                Margin="20"
+                Text="Product Name" />
         </Grid>
     </StackPanel>
 </UserControl>
