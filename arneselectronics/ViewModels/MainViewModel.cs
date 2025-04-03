@@ -23,7 +23,7 @@ public partial class MainViewModel : ViewModelBase
     private readonly DesktopViewModel desktopPage;
     private readonly ResourcesViewModel resourcePage;
     private readonly HardwareViewModel hardwarePage;
-    private readonly CartViewModel cartPage;
+    private  CartViewModel cartPage;
     private readonly ProductDetailPageViewModel productDetailPage;
 
     
@@ -31,7 +31,7 @@ public partial class MainViewModel : ViewModelBase
     public static MainViewModel Instance => _instance ??= new MainViewModel();
     
     // Objects to use in display in main window
-    [ObservableProperty] private double total = 0;
+    [ObservableProperty] private double total =0;
     [ObservableProperty] private double productCounter = 0;
         
 
@@ -48,7 +48,6 @@ public partial class MainViewModel : ViewModelBase
         desktopPage = new DesktopViewModel(this);
         hardwarePage = new HardwareViewModel(this);
         laptopPage = new LaptopViewModel(this);
-        cartPage = new CartViewModel(this);
         productDetailPage = new ProductDetailPageViewModel(this);
     }
     [RelayCommand]
@@ -70,7 +69,11 @@ public partial class MainViewModel : ViewModelBase
     private void GoToHardware() => CurrentPage = hardwarePage;
 
     [RelayCommand]
-    private void GoToCart() => CurrentPage = cartPage;
+    private void GoToCart()
+    {
+        cartPage = new CartViewModel(this);
+        CurrentPage = cartPage;
+    }
 
     [RelayCommand]
     public void GoToProductDetailPage(Products product)

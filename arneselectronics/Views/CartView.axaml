@@ -166,16 +166,17 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-        
         <Grid ColumnDefinitions="*" RowDefinitions="*,*">
             <TextBlock HorizontalAlignment="Right">
-                <Run Text="Total Amount             " />
+                <Run Text="Total Amount"/>
+                <Run Text="{Binding TotalPrice, StringFormat='{}{0:F2} dkk.'}"></Run>
                 <LineBreak />
                 <Run
                     FontWeight="Light"
                     Foreground="Gray"
-                    Text="Including VAT             " />
+                    Text="Including VAT"/>
                 <Run FontWeight="Light" Foreground="Gray" />
+                <Run Text="{Binding VatPrice, StringFormat='{}{0:F2} dkk.'}"></Run>
             </TextBlock>
             <Button
                 Background="MediumSeaGreen"
@@ -204,5 +205,7 @@
                 </Button.Template>
             </Button>
         </Grid>
+        
+        
     </StackPanel>
 </UserControl>
