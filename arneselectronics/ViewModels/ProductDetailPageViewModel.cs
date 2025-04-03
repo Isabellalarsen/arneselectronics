@@ -11,15 +11,12 @@ namespace arneselectronics.ViewModels
 
         [ObservableProperty] private Products? _currentProduct;
         public ObservableCollection<Products> Cartlist => ListInitializer.Instance.CartList;
-        public ProductDetailPageViewModel()
-        {
-        }
+
 
         public ProductDetailPageViewModel(MainViewModel mainViewModel)
         {
             // Ensure that the MainViewModel is passed correctly
-            _mainViewModel = mainViewModel ??
-                             throw new ArgumentNullException(nameof(mainViewModel), "MainViewModel cannot be null");
+            _mainViewModel = mainViewModel;
         }
 
         public void UpdateProduct(Products product)
@@ -30,7 +27,8 @@ namespace arneselectronics.ViewModels
         public void AddToCart() 
         {
             Cartlist.Add(CurrentProduct);
-            Console.WriteLine(Cartlist.Count); 
+            _mainViewModel.Total += CurrentProduct.Price;
+            _mainViewModel.ProductCounter++;
         }
 
     }

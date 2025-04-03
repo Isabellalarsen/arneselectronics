@@ -4,6 +4,7 @@ using arneselectronics.Views;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
+using System.Numerics;
 using arneselectronics;
 
 namespace arneselectronics.ViewModels;
@@ -23,16 +24,20 @@ public partial class MainViewModel : ViewModelBase
     private readonly ResourcesViewModel resourcePage;
     private readonly HardwareViewModel hardwarePage;
     private readonly CartViewModel cartPage;
-    private readonly ProductDetailPageViewModel productDetailPage = new ProductDetailPageViewModel();
+    private readonly ProductDetailPageViewModel productDetailPage;
 
     
     private static MainViewModel _instance;
     public static MainViewModel Instance => _instance ??= new MainViewModel();
+    
+    // Objects to use in display in main window
+    [ObservableProperty] private double total = 0;
+    [ObservableProperty] private double productCounter = 0;
+        
 
-   
-   
- private readonly LogInViewModel logInPage = new LogInViewModel();
- private readonly HelpViewModel helpPage = new HelpViewModel();
+
+    private readonly LogInViewModel logInPage = new LogInViewModel();
+    private readonly HelpViewModel helpPage = new HelpViewModel();
 
 
     public MainViewModel()
@@ -44,6 +49,7 @@ public partial class MainViewModel : ViewModelBase
         hardwarePage = new HardwareViewModel(this);
         laptopPage = new LaptopViewModel(this);
         cartPage = new CartViewModel(this);
+        productDetailPage = new ProductDetailPageViewModel(this);
     }
     [RelayCommand]
     public void GoToHome() =>  CurrentPage = homePage;

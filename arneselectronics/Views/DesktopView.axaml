@@ -10,9 +10,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="clr-namespace:arneselectronics.ViewModels"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-
+    
+    <ScrollViewer>
     <StackPanel>
-        <ScrollViewer>
             <ItemsControl ItemsSource="{Binding DesktopList}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -49,6 +49,6 @@
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
-        </ScrollViewer>
-    </StackPanel>
+     </StackPanel>
+    </ScrollViewer>
 </UserControl>

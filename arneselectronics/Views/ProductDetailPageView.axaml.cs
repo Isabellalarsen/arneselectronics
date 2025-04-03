@@ -20,6 +20,7 @@ namespace arneselectronics.Views
         private void AddToCart(object? sender, RoutedEventArgs e)
         {
             viewModel.AddToCart();
+            
         }
     }
 }
