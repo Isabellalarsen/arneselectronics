@@ -1,6 +1,7 @@
 using System.Collections.ObjectModel;
 using System.Linq;
-using arneselectronics.Credentials;
+using arneselectronics.Crendentials;
+using arneselectronics.Crendentials;
 using Dapper;
 using Npgsql;
 
@@ -23,12 +24,10 @@ public class ListInitializer
     {
         LoadProductsFromDatabase();
     }
-    
-    
 
     public void LoadProductsFromDatabase()
     {
-        Credentials.Credentials credentials = new();
+        Credentials credentials = new();
         string conString = credentials.Database;
 
         using (var con = new NpgsqlConnection(conString))
