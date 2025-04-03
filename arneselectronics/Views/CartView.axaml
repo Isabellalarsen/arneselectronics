@@ -150,8 +150,48 @@
                                         Grid.Column="3"
                                         Text="{Binding Price}"
                                         VerticalAlignment="Center" />
-                                    <Button Background="Transparent">
-                                        <Image Grid.Column="4" Source="avares://arneselectronics/Assets/trashcan-removebg-preview.png" />
+                                    <Button Background="Transparent" Grid.Column="4">
+                                        <Image
+                                            Height="25"
+                                            Source="avares://arneselectronics/Assets/trashcan-removebg-preview.png"
+                                            Width="25" />
+                                    </Button>
+                                </Grid>
+                                <Grid ColumnDefinitions="*" RowDefinitions="*,*">
+                                    <TextBlock HorizontalAlignment="Right">
+                                        <Run Text="Total Amount             " />
+                                        <LineBreak />
+                                        <Run
+                                            FontWeight="Light"
+                                            Foreground="Gray"
+                                            Text="Including VAT             " />
+                                        <Run FontWeight="Light" Foreground="Gray" />
+                                    </TextBlock>
+                                    <Button
+                                        Background="MediumSeaGreen"
+                                        Content="Go to payment"
+                                        FontWeight="Bold"
+                                        Foreground="White"
+                                        Grid.Column="1"
+                                        Grid.Row="1"
+                                        Height="41.66"
+                                        HorizontalAlignment="Right"
+                                        VerticalAlignment="Center"
+                                        Width="125">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border
+                                                    Background="{TemplateBinding Background}"
+                                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                                    BorderThickness="1"
+                                                    CornerRadius="50">
+                                                    <ContentPresenter
+                                                        Content="{TemplateBinding Content}"
+                                                        HorizontalAlignment="Center"
+                                                        VerticalAlignment="Center" />
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Button.Template>
                                     </Button>
                                 </Grid>
                             </StackPanel>
