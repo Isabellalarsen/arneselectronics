@@ -14,13 +14,11 @@ namespace arneselectronics.Views
         public ProductDetailPageView()
         {
             InitializeComponent();
-            this.DataContext = new ProductDetailPageViewModel(new MainViewModel());
         }
         
         private void AddToCart(object? sender, RoutedEventArgs e)
         {
             viewModel.AddToCart();
-            
         }
     }
 }

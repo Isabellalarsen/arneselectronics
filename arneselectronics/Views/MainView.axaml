@@ -15,6 +15,7 @@
     <Design.DataContext>
         <vm:MainViewModel />
     </Design.DataContext>
+<ScrollViewer>
     <StackPanel>
         <Grid
             ColumnDefinitions="Auto,*,*,*,*,Auto"
@@ -120,4 +121,5 @@
         <!--  Page Content  -->
         <ContentControl Content="{Binding CurrentPage}" />
     </StackPanel>
+</ScrollViewer>
 </Window>

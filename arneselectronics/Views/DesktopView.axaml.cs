@@ -18,22 +18,18 @@ public partial class DesktopView : UserControl
     public DesktopView()
     {
         InitializeComponent();
-        this.DataContext = new DesktopViewModel(new MainViewModel());
     }
 
     private void Button_OnClick(object? sender, RoutedEventArgs e)
     {
-
-        // Sørg for at produktet er korrekt bundet og tilgængeligt
         var product = (sender as Button)?.DataContext as Products;
         if (product != null)
         {
-            ViewModel.GoToProductDetailPageCommand.Execute(product);  // Kald kommandoen med produktet
+            ViewModel.GoToProductDetailPageCommand.Execute(product);
         }
         else
         {
-            // Fejlmeddelelse, hvis ViewModel er null
-            Console.WriteLine("ViewModel is null");
+            Console.Write("Product not found");
         }
     }
 
