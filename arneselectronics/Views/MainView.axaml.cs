@@ -17,5 +17,6 @@ public partial class MainView : Window
     {
         InitializeComponent();
         ListInitializer listInitializer = ListInitializer.Instance;
-    }  
+    }
+    
 }

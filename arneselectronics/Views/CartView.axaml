@@ -12,34 +12,22 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <StackPanel Spacing="10">
-        <Grid ColumnDefinitions="*,* " RowDefinitions="*, *, *, *, *">
-            <!--  Heading  -->
-            <TextBlock
-                FontSize="24"
-                FontWeight="Bold"
-                Grid.Column="0"
-                Grid.Row="0"
-                HorizontalAlignment="Left"
-                Margin="20"
-                Text="Cart" />
 
-            <!--  Buy more  -->
-            <Button
-                Background="Transparent"
-                Command="{Binding GoToHomeCommand}"
-                Content="Buy more"
-                Grid.Column="3"
-                Grid.Row="0" />
-
-            <!--  Subtitle  -->
-            <TextBlock
-                FontSize="20"
-                FontWeight="Normal"
-                Grid.Column="0"
-                Grid.Row="1"
-                HorizontalAlignment="Left"
-                Margin="20"
-                Text="Your cart contains" />
-        </Grid>
+            
+            <ItemsControl ItemsSource="{Binding CartList}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="Gray" BorderThickness="1" Padding="5">
+                            <StackPanel>
+                                <Image Height="100" Width="100" Source="{Binding ProductImage}" />
+                                <TextBlock FontSize="16" FontWeight="Bold" Foreground="Black" Text="{Binding Name}" />
+                                <TextBlock FontSize="16" FontWeight="Bold" Foreground="Black" 
+                                           Text="{Binding Price, StringFormat=C}" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        
     </StackPanel>
 </UserControl>
