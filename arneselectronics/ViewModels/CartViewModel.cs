@@ -10,6 +10,7 @@ public partial class CartViewModel : ViewModelBase
 {
     private readonly MainViewModel _mainVm;
     [ObservableProperty] private double? totalPrice;
+    [ObservableProperty] private double? vatPrice;
     public ObservableCollection<Products> HardwareList => ListInitializer.Instance.HardwareList;
     
     public ObservableCollection<Products> CartList => ListInitializer.Instance.CartList;
@@ -19,6 +20,7 @@ public partial class CartViewModel : ViewModelBase
     {
         _mainVm = mainVm;
         totalPrice = _mainVm.Total;
+        vatPrice = totalPrice * 0.2;
         GoToHomeCommand = new RelayCommand(() => _mainVm.GoToHome());
     }
 
