@@ -11,7 +11,6 @@ public partial class CartViewModel : ViewModelBase
     private readonly MainViewModel _mainVm;
     
     public ObservableCollection<Products> CartList => ListInitializer.Instance.CartList;
-    
     public IRelayCommand GoToHomeCommand { get; }
 
     public CartViewModel(MainViewModel mainVm)
