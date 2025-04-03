@@ -11,8 +11,11 @@ namespace arneselectronics.ViewModels
 
         [ObservableProperty] private Products? _currentProduct;
         public ObservableCollection<Products> Cartlist => ListInitializer.Instance.CartList;
+        
+        public IRelayCommand GoToHomeCommand { get; }
         public ProductDetailPageViewModel()
         {
+            GoToHomeCommand = new RelayCommand(() => _mainViewModel.GoToHome());
         }
 
         public ProductDetailPageViewModel(MainViewModel mainViewModel)
@@ -20,6 +23,8 @@ namespace arneselectronics.ViewModels
             // Ensure that the MainViewModel is passed correctly
             _mainViewModel = mainViewModel ??
                              throw new ArgumentNullException(nameof(mainViewModel), "MainViewModel cannot be null");
+            
+            GoToHomeCommand = new RelayCommand(() => _mainViewModel.GoToHome());
         }
 
         public void UpdateProduct(Products product)
@@ -32,6 +37,6 @@ namespace arneselectronics.ViewModels
             Cartlist.Add(CurrentProduct);
             Console.WriteLine(Cartlist.Count); 
         }
-
+        
     }
 }
