@@ -15,40 +15,43 @@
     <Design.DataContext>
         <vm:MainViewModel />
     </Design.DataContext>
-    <ScrollViewer>
-        <StackPanel>
-            <Grid
-                ColumnDefinitions="Auto,*,*,*,*,Auto"
-                RowDefinitions="Auto, Auto,Auto"
-                ShowGridLines="True">
-                <!--  Logo Button  -->
-                <Button
-                    Background="Transparent"
-                    Command="{Binding GoToHomeCommand}"
-                    Grid.Column="0"
-                    Grid.Row="0"
-                    Height="200"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Width="200">
-                    <Image Source="avares://arneselectronics/Assets/arneslogo.png" />
-                </Button>
-                <!--  Search Box  -->
-                <TextBox
-                    FontSize="20"
-                    Grid.Column="2"
-                    Grid.Row="0"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Watermark="Search" />
+<ScrollViewer>
+    <StackPanel>
+        <Grid
+            ColumnDefinitions="Auto,*,*,*,Auto"
+            RowDefinitions="Auto, Auto"
+            ShowGridLines="True">
+            <!--  Logo Button  -->
+            <Button
+                Background="Transparent"
+                Command="{Binding GoToHomeCommand}"
+                Grid.Column="0"
+                Grid.Row="0"
+                Height="200"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Width="200">
+                <Image Source="avares://arneselectronics/Assets/arneslogo.png" />
+            </Button>
+            <!--  Search Box  -->
+            <TextBox
+                FontSize="20"
+                Width="300"
+                CornerRadius="20"
+                Grid.Column="2"
+                Grid.Row="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Watermark="Search" />
 
+            <Grid Grid.Column="3" ColumnDefinitions="*,*" ShowGridLines="False">
                 <!--  Help Button  -->
-                <Button
+                <Button 
                     Background="Transparent"
                     Command="{Binding GoToHelpCommand}"
-                    Grid.Column="3"
+                    Grid.Column="0"
                     Height="60"
-                    HorizontalAlignment="Right"
+                    HorizontalAlignment="Center"
                     Width="50">
                     <Image Source="avares://arneselectronics/Assets/helpbutton.jpg" />
                 </Button>
@@ -57,69 +60,71 @@
                 <Button
                     Background="Transparent"
                     Command="{Binding GoToLogInCommand}"
-                    Grid.Column="4"
+                    Grid.Column="1"
                     Height="60"
-                    HorizontalAlignment="Right"
+                    HorizontalAlignment="Center"
                     Width="50">
                     <Image Source="avares://arneselectronics/Assets/loginbillede.jpg" />
                 </Button>
-                <StackPanel
-                    Grid.Column="5"
-                    Grid.Row="0"
-                    VerticalAlignment="Center" Margin="10">
-                    <!--  Cart Button  -->
-                    <Button
-                        Background="Transparent"
-                        Command="{Binding GoToCartCommand}"
-                        Height="60"
-                        HorizontalAlignment="Right"
-                        Width="50">
-                        <Image Source="avares://arneselectronics/Assets/carticon.jpg" />
-                    </Button>
-
-                    <!--  Textblock for total amount and quantity  -->
-                    <TextBlock Name="Quantity" Text ="{Binding ProductCounter, StringFormat=' Total Items: {0}'}"/>
-
-                    <TextBlock Name="Total" Text="{Binding Total, StringFormat='Total price: {0:0.00}'}" />
-                </StackPanel>
             </Grid>
+            
+            <StackPanel
+                Grid.Column="5"
+                Grid.Row="0"
+                VerticalAlignment="Center" Margin="10">
+                <!--  Cart Button  -->
+                <Button
+                    Background="Transparent"
+                    Command="{Binding GoToCartCommand}"
+                    Height="60"
+                    HorizontalAlignment="Right"
+                    Width="50">
+                    <Image Source="avares://arneselectronics/Assets/carticon.jpg" />
+                </Button>
 
-            <!--  Navigation Buttons  -->
-            <Grid ColumnDefinitions="*,*,*,*,*,*">
-                <Button
-                    Command="{Binding GoToHardwareCommand}"
-                    Grid.Column="1"
-                    VerticalAlignment="Top">
-                    Hardware
-                </Button>
-                <Button
-                    Command="{Binding GoToDesktopCommand}"
-                    Grid.Column="2"
-                    VerticalAlignment="Top">
-                    Desktop
-                </Button>
-                <Button
-                    Command="{Binding GoToAccessoriesCommand}"
-                    Grid.Column="3"
-                    VerticalAlignment="Top">
-                    Accessories
-                </Button>
-                <Button
-                    Command="{Binding GoToLaptopCommand}"
-                    Grid.Column="4"
-                    VerticalAlignment="Top">
-                    Laptop
-                </Button>
-                <Button
-                    Command="{Binding GoToResourceCommand}"
-                    Grid.Column="5"
-                    VerticalAlignment="Top">
-                    Resource
-                </Button>
-            </Grid>
+                <!--  Textblock for total amount and quantity  -->
+                <TextBlock Name="Quantity" Text ="{Binding ProductCounter, StringFormat=' Total Items: {0}'}"/>
 
-            <!--  Page Content  -->
-            <ContentControl Content="{Binding CurrentPage}" />
-        </StackPanel>
-    </ScrollViewer>
+                <TextBlock Name="Total" Text="{Binding Total, StringFormat='Total price: {0:0.00}'}" />
+            </StackPanel>
+        </Grid>
+
+        <!--  Navigation Buttons  -->
+        <Grid ColumnDefinitions="*,*,*,*,*,*">
+            <Button
+                Command="{Binding GoToHardwareCommand}"
+                Grid.Column="1"
+                VerticalAlignment="Top">
+                Hardware
+            </Button>
+            <Button
+                Command="{Binding GoToDesktopCommand}"
+                Grid.Column="2"
+                VerticalAlignment="Top">
+                Desktop
+            </Button>
+            <Button
+                Command="{Binding GoToAccessoriesCommand}"
+                Grid.Column="3"
+                VerticalAlignment="Top">
+                Accessories
+            </Button>
+            <Button
+                Command="{Binding GoToLaptopCommand}"
+                Grid.Column="4"
+                VerticalAlignment="Top">
+                Laptop
+            </Button>
+            <Button
+                Command="{Binding GoToResourceCommand}"
+                Grid.Column="5"
+                VerticalAlignment="Top">
+                Resource
+            </Button>
+        </Grid>
+
+        <!--  Page Content  -->
+        <ContentControl Content="{Binding CurrentPage}" />
+    </StackPanel>
+</ScrollViewer>
 </Window>

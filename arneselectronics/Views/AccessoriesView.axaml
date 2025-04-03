@@ -12,7 +12,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <StackPanel>
-        <ScrollViewer>
             <ItemsControl ItemsSource="{Binding AccessoriesList}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -49,6 +48,5 @@
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
-        </ScrollViewer>
     </StackPanel>
 </UserControl>

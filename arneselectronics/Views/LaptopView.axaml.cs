@@ -18,25 +18,17 @@ public partial class LaptopView : UserControl
     public LaptopView()
     {
         InitializeComponent();
-        this.DataContext = new LaptopViewModel(new MainViewModel());
     }
 
     private void Button_OnClick(object? sender, RoutedEventArgs e)
     {
-        if (ViewModel != null)
+
+        var product = (sender as Button)?.DataContext as Products;
+        if (product != null)
         {
-            // Sørg for at produktet er korrekt bundet og tilgængeligt
-            var product = (sender as Button)?.DataContext as Products;
-            if (product != null)
-            {
-                ViewModel.GoToProductDetailPageCommand.Execute(product);  // Kald kommandoen med produktet
-            }
+            ViewModel.GoToProductDetailPageCommand.Execute(product);
         }
-        else
-        {
-            // Fejlmeddelelse, hvis ViewModel er null
-            Console.WriteLine("ViewModel is null");
-        }
+
     }
 
 

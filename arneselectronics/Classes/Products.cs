@@ -1,6 +1,7 @@
 using Avalonia.Platform;
 using Avalonia.Media.Imaging;
 using System;
+using arneselectronics.Views;
 
 namespace arneselectronics
 {
@@ -33,7 +34,7 @@ namespace arneselectronics
                     Console.WriteLine($"Could not load image: {FilePath} - {ex.Message}");
                 }
 
-                // Fallback-billede, hvis der opstår en fejl
+                // Fallback if picture cant load
                 var fallbackUri = new Uri("avares://arneselectronics/Assets/fallback.jpg");
                 using var fallbackStream = AssetLoader.Open(fallbackUri);
                 return new Bitmap(fallbackStream);
@@ -53,14 +54,7 @@ namespace arneselectronics
             DescriptionPath = description;
         }
 
-        // Tom constructor til database-oprettelse af produkter
+        // Empty constructor for loading of products
         public Products() { }
-
-        public string Display(string displayMode)
-        {
-            return displayMode == "FrontPage"
-                ? $"{Name}\n{Price:C}"
-                : $"{Name}\t{Price:C}\n{DescriptionPath}\nEAN: {EAN_Number}\nID: {ID}";
-        }
     }
 }
