@@ -33,13 +33,11 @@ public partial class MainViewModel : ViewModelBase
     // Objects to use in display in main window
     [ObservableProperty] private double total =0;
     [ObservableProperty] private double productCounter = 0;
-        
-
-
+    
+    
     private readonly LogInViewModel logInPage = new LogInViewModel();
     private readonly HelpViewModel helpPage = new HelpViewModel();
-
-
+    
     public MainViewModel()
     {
         homePage = new HomePageViewModel(this);
@@ -82,12 +80,9 @@ public partial class MainViewModel : ViewModelBase
         CurrentPage = productDetailPage;
     }
     
-
     [RelayCommand]
     private void GoToLogIn() => CurrentPage = logInPage;
     
     [RelayCommand]
     private void GoToHelp() => CurrentPage = helpPage;
-
-   
 }

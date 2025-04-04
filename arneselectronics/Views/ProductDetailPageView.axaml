@@ -49,7 +49,7 @@
             <Button
                 Background="AliceBlue"
                 BorderThickness="3"
-                Click="AddToCart"
+                Click="AddToCartButton"
                 Focusable="True"
                 FontSize="18"
                 FontWeight="Bold"

@@ -16,7 +16,7 @@ namespace arneselectronics.Views
             InitializeComponent();
         }
         
-        private void AddToCart(object? sender, RoutedEventArgs e)
+        private void AddToCartButton(object? sender, RoutedEventArgs e)
         {
             viewModel.AddToCart();
         }
