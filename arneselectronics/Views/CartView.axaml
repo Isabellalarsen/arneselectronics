@@ -174,7 +174,7 @@
                 <Run
                     FontWeight="Light"
                     Foreground="Gray"
-                    Text="Including VAT"/>
+                    Text="VAT"/>
                 <Run FontWeight="Light" Foreground="Gray" />
                 <Run Text="{Binding VatPrice, StringFormat='{}{0:F2} dkk.'}"></Run>
             </TextBlock>
